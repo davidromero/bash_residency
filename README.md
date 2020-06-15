@@ -7,4 +7,4 @@ The main purpose is to eliminate using GUIs and have a portable startup-sequence
 - Runs IDEA IntelliJ, firefox and calibre, check website status and [TODO] utils.
 
 
-* runs on secondary machine
+** tested on secondary machine
