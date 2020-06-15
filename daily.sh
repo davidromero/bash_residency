@@ -3,16 +3,53 @@
 # Daily Routine
 
 LINE_DEL='-----------------------------------------'
-ESPACES='             '
+ESPACES='                    '
 
 # Color for Output -e flag
 WHITE_COLOR='\E[1;37m'
 BLUE_COLOR='\E[0;34m'
 GREEN_COLOR='\E[0;32m'
-YELLOW_COLOR='\E[1;33m'
+ORANGE_COLOR='\E[0;33m'
 RED_COLOR='\E[0;31m'
 CYAN_COLOR='\E[0;36m'
 PURPLE_COLOR='\E[0;35m'
+
+# This (.sh) MUST be the main entry point if for some reason something is already running it should check it, before trying to run
+
+check_is_running(){
+
+	if [[ -z $(pgrep $1) ]]; then				# check if return value is ZERO
+		start_process $1				# Starting sequence
+	else
+		echo -e $ORANGE_COLOR 'is already running'   # Ops,  already running
+	fi
+}
+
+start_process(){
+
+	if ! [ -x "$(command -v $1)" ]; then
+		echo -e $RED_COLOR 'Error: '$1' is not installed.'
+	else
+		case $1 in 					# unique checker, multiple launch, just add HERE future
+			idea)
+				echo -e $GREEN_COLOR 'Launching idea\n'
+				idea &
+				sleep 45s
+				;;
+			firefox)
+				echo -e $GREEN_COLOR 'Launching firefox\n'
+				firefox mail.google.com &
+				;;
+			calibre)
+				echo -e $GREEN_COLOR 'Launching calibre\n'
+				calibre &
+				;;
+			*)
+				echo -e $RED_COLOR 'ERROR - no able to launch'$1
+				;;
+		esac
+	fi
+}
 
 check_health_status() {
 	curl -s --HEAD $1 | grep -q "200"
@@ -30,49 +67,37 @@ print_del_lin(){
 	echo -e $BLUE_COLOR $LINE_DEL
 }
 
+log_() {
+	echo -e $CYAN_COLOR 'ID {num}' >> launch.log
+	printf $RED_COLOR >> launch.log
+	my_date=$(date +"%H-%M-%S.%d/%m/%Y")
+	printf "$my_date " >> launch.log
+	uname -noi >> launch.log
+}
+
+log_
 
 echo -e $WHITE_COLOR 'Daily Starting Process'
 print_del_lin
 
 echo -e $WHITE_COLOR 'Starting IDEA'
-if ! [ -x "$(command -v idea)" ]; then
-	echo -e  $RED_COLOR'Error: idea is not installed.'
-else
-	echo -e $CYAN_COLOR 'Launching idea\n'
-	#idea &
-	#sleep 45s
-fi
-
+check_is_running idea
 print_del_lin
 
 echo -e $WHITE_COLOR 'Staring Web Browser'
-if ! [ -x "$(command -v firefox)" ]; then
-	echo -e $RED_COLOR 'Error: firefox is not installed.'
-else
-	#firefox mail.google.com github.com twitter.com
-	echo -e $CYAN_COLOR 'Launching firefox\n'
-fi
-
+check_is_running firefox
 print_del_lin
 
 echo -e $WHITE_COLOR 'Starting BookShelf'
-if ! [ -x "$(command -v calibre)" ]; then
-	echo -e $RED_COLOR 'Error: calibre is not installed.'
-else
-	echo -e $CYAN_COLOR 'Launching calibre\n'
-	#calibre &
-fi
-
+check_is_running calibre
 print_del_lin
 
 echo -e $WHITE_COLOR '**** Checking Website Health Status  ****'
 
 echo -e $CYAN_COLOR"$ESPACES"'Personal'
-
 check_health_status dromero.xyz
 
 echo -e $CYAN_COLOR"$ESPACES"'Raspberry'
-
 check_health_status raspberry.dromero.xyz
 
 print_del_lin
