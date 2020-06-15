@@ -21,7 +21,7 @@ check_is_running(){
 	if [[ -z $(pgrep $1) ]]; then				# check if return value is ZERO
 		start_process $1				# Starting sequence
 	else
-		echo -e $ORANGE_COLOR 'is already running'   # Ops,  already running
+		echo -e $ORANGE_COLOR $1 'is already running'   # Ops,  already running
 	fi
 }
 
