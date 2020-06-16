@@ -84,7 +84,7 @@ echo -e $WHITE_COLOR 'Starting IDEA'
 check_is_running idea
 print_del_lin
 
-echo -e $WHITE_COLOR 'Staring Web Browser'
+echo -e $WHITE_COLOR 'Starting Web Browser'
 check_is_running firefox
 print_del_lin
 
