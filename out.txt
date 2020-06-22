@@ -1,0 +1,1282 @@
+
+<!DOCTYPE html>
+<meta aria-label="MONITOREOGC" />
+<html lang="es">
+<head id="MasterGC_Head1"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"2eab65ad9e","applicationID":"49266707","transactionName":"YlNQbEBTD0UCABdaDVsZc2tiHQJZDQAWQRFaRR1cV0YAWg8GE1wQRkNQVV1WAlkNABZBDUYYU0tCSg==","queueTime":0,"applicationTime":3843,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"2eab65ad9e",applicationID:"49266707"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script><link href="/CSS/NewGCStyle.css" rel="stylesheet" type="text/css" /><link href="/CSS/pop_menu.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/include/funcionesHome.js"></script>
+    <link href="/CSS/Styles.css" type="text/css" rel="stylesheet" />
+    <script src="/include/jquery-1.8.1.min.js"></script>
+    <link href="/CSS/bootstrap.min.css" rel="stylesheet" /><link href="/CSS/bootstrap-theme.css" rel="stylesheet" />
+    <script src="/js/bootstrap.js"></script>
+
+    <title>
+	Guatecompras - Búsqueda avanzada de concursos
+</title>
+    <style>
+        select {
+            min-width: 230px;
+            max-width: 760px;
+        }
+
+        .TooltipConcursos {
+            position: absolute;
+            visibility: hidden;
+            color: Black;
+            background-color: #D7E3F2;
+            width: 250px;
+            font-size: 11px;
+            padding: 6px;
+            border: #99B2D2 1px solid;
+            margin-left: 25px;
+            margin-top: -15px;
+            font-weight: normal!important;
+        }
+
+        .auto-style2 {
+            height: 110px;
+        }
+        .TablaItemAzulSm,.TablaItemNormal ,.TablaItemAlerta{
+            font-size: 10px !important;
+        }
+        .boldTotal {
+         font-weight: bold;
+     }
+    </style>   
+<link href="/WebResource.axd?d=iDlhCXHN36Hlv0ztuRBAg2Aue8wq9g3WG0jPpHHcd95FqWjLwaT23aGU8LNyirvZnuLFlP80vobR1vs5xeWpTU53vk8KFTvHC1TJg4S64udx8mj8FsVfMVM2okhiNtOwHEGE-sIKHjn1pmgDPvbeVszGAM7xstmzaxzUnUHZR693xht-0&amp;t=636270958700000000" type="text/css" rel="stylesheet" /></head>
+<body id="MasterGC_Body" style="margin-top: 0px; margin-left: 0px">
+    <script type="text/javascript">
+        function doSubmit() { return true; }
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-39119198-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <div id="bodywrap">
+        <div id="pageheader">
+            <div id="imagen_logo">
+                <a href="/default.aspx">
+                    <img src="/images/logo.png" /><br />
+                </a>
+            </div>
+            <div>
+                <div id="banner">
+                    <img src="/images/curva_banner.png">
+                </div>
+
+                <div style="text-align: right;">
+                    <img id="MasterGC_imgServer" src="/images/identificadorGC3.png" border="0" />
+                    <div class="limpiar"></div>
+                    <div style="height: 4px;"></div>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            
+        </div>
+        <div class="limpiar"></div>
+        <div id="submodulo_header_container">
+            <div id="submodulo_menu_gc_buscador">
+                <div id="img_menu">
+                    <img src="/images/menu/rojo_buscador.png">
+                </div>
+                <div id="submodulo">
+                    <div id="sub_menu">
+                        <ul id="nav">
+                            <li>
+                                <a href="/concursos/consultaConAvanz.aspx" class="submodulo_submenu_corto">
+                                    <div id="texto_modulo_buscador">
+                                        Bienvenido a la sección de <span>Búsqueda</span>
+                                    </div>
+                                    <div id="imagen_modulo">&nbsp;<img src="/images/flecha.png" style="border: none !important" /></div>
+                                </a>
+                                <ul id="submodulo_buscador_sub_menu">
+                                    <li><a href="/concursos/consultaConAvanz.aspx" class="">Concursos</a></li>
+                                    <li><a href="/concursos/ConsultaAvanzProyBase.aspx" class="">Proyectos de Bases</a></li>
+                                    <li><a href="/proveedores/consultaadvprovee.aspx" class="">Adjudicaciones</a></li>
+                                    <li><a href="/Inconformidad/consultaAvInc.aspx?opt=Search" class="">Inconformidades</a></li>
+                                    <li><a href="/PubSinConcurso/ConsultaAdjSN.aspx?o=1" class="">Publicaciones NPG </a></li>
+                                    <li><a href="/contrato/BusquedaAvanz.aspx" class="">Productos contrato abierto</a></li>
+                                    <li><a href="/proveedores/consultaadvprovee.aspx?o=1" class="">Contratos Infraestructura</a></li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="submodulo_menu_iconos_laterales">
+                <div id="imagenes_sub_modulo">
+                    <a href="/">
+                        <img src="/images/mini_paneles/miniazul_inicio.png" title="Inicio"></a>
+                    <a href="/contrato/consultacontratos.aspx">
+                        <img src="/images/mini_paneles/miniceleste_contratos_abiertos.png" title="Contrato Abierto"></a>
+                    <a href="/proveedores/busquedaProvee.aspx">
+                        <img src="/images/mini_paneles/miniverde_proveedores.png" title="Proveedores"></a>
+                    <a href="/Compradores/RegistroResumen.aspx?type=1">
+                        <img src="/images/mini_paneles/miniamarillo_compradores.png" title="Compradores"></a>
+                    <a href="/Inconformidad/consultaAvInc.aspx?opt=Home">
+                        <img src="/images/mini_paneles/minimorado_inconformidades.png " title="Inconformidades"></a>
+                    <a href="/compradores/ConsultaPAC.aspx">
+                        <img src="/images/mini_paneles/mininaranja_PAC.png" title="Plan Anual de Compras"></a>
+                    <a href="/info/legislacion.aspx">
+                        <img src="/images/mini_paneles/miniaqua_base_legales.png" title="Base Legal"></a>
+                    <a href="/contactenos/contactenos.aspx?opt=Home">
+                        <img src="/images/mini_paneles/minigris_informacion_asistencia.png" title="Información y Asistencia"></a>
+                    <a href="/info/consultaDocumentosEstadisticos.aspx">
+                        <img src="/images/mini_paneles/miniazulmorado_transparencia.png" title="Estadísticas"></a>
+                    <a href="/MiPymes/frmBusquedaAvanzadaMiPymes.aspx">
+                        <img src="/images/mini_paneles/minicorinto_pymes.png" title="Mipymes" /></a>
+                    <a href="/priv/sistema/login.aspx">
+                        <img src="/images/mini_paneles/mini_llave.png" title="Login"></a>
+                </div>
+                <div id="text_imagenes_submodulo">Seleccione su módulo de consulta</div>
+            </div>
+        </div>
+        <div class="limpiar"></div>
+        <span id="MasterGC_BarraNav"><a class="Barra" href='http://www.guatecompras.gt/'>Inicio</a>&nbsp;<span class="BarraSep">></span>&nbsp;<span class="BarraLastItem">Buscar concursos</span></span>
+        <form name="aspnetForm" method="post" action="./detallePorSubModConcuros.aspx?Ent=-1&amp;Tep=-1&amp;Te=-1&amp;Uc=-1&amp;Est=-1&amp;DType=-1&amp;NOG=&amp;SNIP=-1&amp;TC=-1&amp;CAT=-1&amp;Desc=HOSPITAL+ROOSEVELT&amp;MOD=-1&amp;TRO=-1&amp;typeS=1" id="aspnetForm" onsubmit="return doSubmit();">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTgwMTcyNDQxNw8WBB4KU29ydENvbHVtbgURRkVDSEFfUFVCTElDQUNJT04eClNvcnRBc2NlbmQFBERFU0MWAmYPZBYCAgMPZBYCAgcPZBYCAgEPZBYCAgcPZBYCZg9kFgQCAQ8PFgIeBFRleHQFKzEgYWwgNTAgZGUgMSwxMjUsMzYxIGNvbmN1cnNvcyBjb25zdWx0YWRvcyBkZAIDDzwrAAsCAA8WDB4LXyFJdGVtQ291bnQCMh4IRGF0YUtleXMWAB4HVmlzaWJsZWceCVBhZ2VDb3VudALsrwEeFV8hRGF0YVNvdXJjZUl0ZW1Db3VudALx10QeEFZpcnR1YWxJdGVtQ291bnQC8ddEZAE8KwAEAQM8KwAEAQAWAh8FaGRk6m3fuNWMtIr2NxZBZEdvk8je59c=" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = {"name":"es-GT","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":".","IsReadOnly":true,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":",","CurrencySymbol":"Q","NaNSymbol":"NeuN","CurrencyNegativePattern":1,"NumberNegativePattern":1,"PercentPositivePattern":1,"PercentNegativePattern":1,"NegativeInfinitySymbol":"-Infinito","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":".","NumberGroupSeparator":",","CurrencyPositivePattern":0,"PositiveInfinitySymbol":"Infinito","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":".","PercentGroupSeparator":",","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"a. m.","Calendar":{"MinSupportedDateTime":"\/Date(-62135575200000)\/","MaxSupportedDateTime":"\/Date(253402300799999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2029,"IsReadOnly":true},"DateSeparator":"/","FirstDayOfWeek":1,"CalendarWeekRule":0,"FullDateTimePattern":"dddd, dd\u0027 de \u0027MMMM\u0027 de \u0027yyyy h:mm:ss tt","LongDatePattern":"dddd, dd\u0027 de \u0027MMMM\u0027 de \u0027yyyy","LongTimePattern":"h:mm:ss tt","MonthDayPattern":"d\u0027 de \u0027MMMM","PMDesignator":"p. m.","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"dd/MM/yyyy","ShortTimePattern":"h:mm tt","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM\u0027 de \u0027yyyy","AbbreviatedDayNames":["dom.","lun.","mar.","mié.","jue.","vie.","sáb."],"ShortestDayNames":["do.","lu.","ma.","mi.","ju.","vi.","sá."],"DayNames":["domingo","lunes","martes","miércoles","jueves","viernes","sábado"],"AbbreviatedMonthNames":["ene.","feb.","mar.","abr.","may.","jun.","jul.","ago.","sep.","oct.","nov.","dic.",""],"MonthNames":["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre",""],"IsReadOnly":true,"NativeCalendarName":"Calendario gregoriano","AbbreviatedMonthGenitiveNames":["ene.","feb.","mar.","abr.","may.","jun.","jul.","ago.","sep.","oct.","nov.","dic.",""],"MonthGenitiveNames":["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre",""]},"eras":[1,"d.C.",null,0]};//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=aiSo7wB8fgLIwGFmtflA-p8oMDRnKEzdgTZDabL9PMUM1orzGQqrzcLvJN-TFtvHquhIFM-6gTTFeOO-T3nYOcRj4RRu_suwSwvVDVOv2MI7dLfPezatg41CAtQ_DHWnowIM06M99ua8TgOzQUpfQna2avn9nUMbpYMsFqq-GTkNMbbV0&amp;t=ffffffff9a9577e8" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=Z3Wy9BNof017kId584iIOTxObiMJACsQyQBh2WyN6_lV3CcerYJmSjBFfexUASW08dZKpdffM5gTcvAdB-CPbc1i1txgtQXs_0cuHd4wYeEMSD1E6xhXc3DXttmCay6ILJPVjg2&amp;t=ffffffff949e5296" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=W2yUsoExCsuTqNU1-GIeqw7RHNe8-LpHNdGv06WORD_rPwcG3ulx10Q6XxNHGkYKR-2ThLxAVSoNpq6aL3CBdMY7WKixQkopdrKbPJY6dQelIxuig1v9-9MdEpB1D0C_lD1GPFrKgesREpJYNSRsgzOTTFk1&amp;t=ffffffff949e5296" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=6OgN9HiOBlb0cvuclWWufu4ec1sOoL6YQCQ39DOSjPVbM0Gsqrl7sP0CAN5L9o-KZeSc8cFnTnQ99uAkSjlNp1eAqL693WxAasCfpROSF1zmjTk-0&amp;t=ffffffff949e5296" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=4-sbYlwH0VJruPT6-xS2XPQuthXDRWD4UlViCt-XR98M-4K5C5mWDmk_bmVIdfS8xoLRg0-472C7qcZ-CNCq9GTJ7ZjbLlmislkwvfTl5WtGwq0oKNkpEdK5xLsJiqIpmFMoQg2&amp;t=ffffffff949e5296" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=4zmUu-7OHw_K3sKmwCSuwJodGtcwAts0eFJz4Km9uBGcc_V4psreFGbNOde79qRhvNZd_QnsV4JNv4AuBFf4ImO9RhDdgGF9GPaq45YHQUAxKIW2utGsMB65Pgl3r1jH11kBvA2&amp;t=ffffffff949e5296" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=mg0lHoEEewAluPl1sWdJLdjZESKwxkUhUYRFlUON4TFxNl5AYx4gd69beX5xFo55Cepm8L2Wir6T3LnCl6u6ScdKPRMNtJOadAeefW6KMRE48jwUGUuvJ89ploK7h4iCE6Rzxg2&amp;t=ffffffff949e5296" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=cyxB3AeAHKXHuKY0vEqM4GKQnHjveaPK920r9CjesfUVBkbGo6mRHkTPIFJtmViZSaf44X87LRWGVFRFu5PBoA7BkHiuyl-4Ld6ST5vtzleR9iF5cM1HQQo_lapQwUhcCIMdeQ2&amp;t=ffffffff949e5296" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=T71_fsHVwB1r9F7Ac8KYcTOg3Rd3Fsz5zbW3UhzJoEohGYRrWREa9cvhr1TnBt9yIGz5iaqOA0tX5qXxPZKrbdP7PjJ67ByEYaWdQDynJgR__DC-6s7hM0A1QZ9D2MPsHw3tEg2&amp;t=ffffffff949e5296" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=gSuOgebxxLD_d9hQbmp8g-C1cbhER-4--nJcrN1xhWq7b3n3YpxwhsXC_gtpm2n9a2HozajyuwYRvx29h7Ml2LA3YWT8Cw306j5odACt25EzCInQffjOjg9TW9Ch6kS2rdRj8g2&amp;t=ffffffff949e5296" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=S-ni3qYkNgTmFmSHJjtaDKJkRsGf24CimLsTFK_HdYOwneoABiOGSN2M5cIjxipeLR4RVVKOm5K45LPXyXpthfo5loa_Twptf7sO8ksYMpboKtkpYzBYQeD4I8wHXf4xJA2jOg2&amp;t=ffffffff949e5296" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=KWPJLrYOFNdqnfApe62Mx-OLp5xYOiiJQV1diczTEV2IXhDxWPA5g2TucSes4XFCP5DMckjCpf05C1VUUmeq7h1ouHeGO9knWTbmWqCHavKK-omHC_ViyMjj2AVbF3Ra-tbraA2&amp;t=ffffffff949e5296" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=OXlE3u6EXZB0b5MkZhU2iULei9tIUPWeA4zf9YPCRBk0EoY5WKT1IGeuxCmyYLuklBYlm7rvF2RCji1HXAKKF8H8KCS8T4J2Op3BbWV0DNySuIKbjEB4K2pUftp3y1DeqRN12A2&amp;t=ffffffff949e5296" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=9RJw4mm-Tyam4H1FVccrSTT8iuHSvTw74qdpUEdu8iU1Q_xXFvl3ihY50XEg6Hl6FincOa8vSEEJfgXjY28OIb8AS7gWB3SiTQkP60pHwXDB_JB70kca-P8sFBRnWAcZqtOk1Q2&amp;t=ffffffff949e5296" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=SkLq-4xAVCjXkus_mBDU_WDWmCqqoRpE5buVoPAViEcAjQ857Bap-_govodCnQk-uEJb2fcZISWleau0LRdv5TpW7SDRV0gUWQZWhyiX2EqG1gIqWOqvGLTzU3etYm4k-vxASw2&amp;t=ffffffff949e5296" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="947D03BE" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAA7qWIMDMO1/MAdUognIV+sVc7m8Sk2+pxYYvRNg4/GCjQ4G/FGoPonWZoaeM/H6D4M+MTdeVIWOCu6QPZ4tnMxgdTQnfVZ2Bpjxj7ZAwLTUHhAyAbFSXCNewL1+ML7iCeQIDKKfoPqyHI3y56lO7CBHda+PQTbnfRs4XauQ7ugrmor4/ydEm+lVBfcmAqtDt9p1c0AZwG788Qhwz8v3UDVuCURZKKd0k0ocjj7rvkI8hchChi1M7AFv0ttqTeAkNZPz5rKYj58hXQG7CuytGbciL/7rtN7RFwKC3ae/d8fgkc2O53mVO6JQ5yoesWUCPbNTxb29" />
+
+
+
+            
+    <br />
+         
+        <script type="text/javascript" language="javascript">
+           var ModalProgress = 'MasterGC_ContentBlockHolder_ModalProgress';
+           Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(beginRequest);
+           Sys.WebForms.PageRequestManager.getInstance().add_endRequest(endRequest);
+           function beginRequest(sender, args) {
+               $find(ModalProgress).show();
+           }
+           function endRequest(sender, args) {
+               $find(ModalProgress).hide();
+           }  
+    </script>
+<div id="MasterGC_ContentBlockHolder_panelUpdateProgress" class="updateProgress">
+	
+    <div id="MasterGC_ContentBlockHolder_UpdateProgress1" style="display:none;">
+		
+            <div style="position: relative; top: 14px; text-align: center;">
+                <img src="/imagenes/misc/indicator.gif" style="vertical-align: middle" alt="Procesando" />
+                <span class="TextoAzul">Por favor, espere un momento...</span>
+            </div>
+        
+	</div>
+
+</div>
+
+
+<table class="TituloPag1" cellspacing="0" cellpadding="2">
+    <tr><td>
+		<table class="TituloPag2" cellspacing="0" cellpadding="2">
+		    <tr><td class="TituloPag3" align="center">
+				<table class="TituloPag3" cellspacing="3" cellpadding="4">
+				    <tr class="TituloPag4"><td>Detalle de búsqueda avanzada de concursos</td></tr>
+				</table>
+			</td></tr>
+		</table>
+	</td></tr>
+</table>
+<br />
+     
+     
+    <input name="MasterGC$ContentBlockHolder$IEEnterSolv" type="text" id="MasterGC_ContentBlockHolder_IEEnterSolv" style="visibility:hidden;display:none;" />
+        
+     
+                                       
+<div id="MasterGC_ContentBlockHolder_UPResultado">
+	
+	    <table class="TablaForm3" align="center" >
+		    <tr><td align="right"><span id="MasterGC_ContentBlockHolder_lblFilas" class="mensajeRecuperadosxden">1 al 50 de 1,125,361 concursos consultados </span></td></tr>
+		</table>
+		<table class="GridTablaResumen" cellspacing="1" cellpadding="4" align="Center" rules="rows" border="1" id="MasterGC_ContentBlockHolder_dgResultado">
+		<tr class="encabezado1">
+			<td><a href="javascript:__doPostBack(&#39;MasterGC$ContentBlockHolder$dgResultado$ctl02$ctl01&#39;,&#39;&#39;)">Fecha de publicación</a><span>&#9660;</span></td><td>Descripción</td><td width="15%"><a href="javascript:__doPostBack(&#39;MasterGC$ContentBlockHolder$dgResultado$ctl02$ctl02&#39;,&#39;&#39;)">Modalidad</a></td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl03_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12819999</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl03_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl03_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl03_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl03_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl03_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl03_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl03_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL DR. JUAN JOSE AREVALO BERMEJO</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl03_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl03_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12819999&amp;o=4"><b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>N<b></b>O<b></b>.<b></b> <b></b>6<b></b>4<b></b>5<b></b>/<b></b>2<b></b>0<b></b>2<b></b>0<b></b>,<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>P<b></b>P<b></b>R<b></b> <b></b>4<b></b>8<b></b>3<b></b>3<b></b>8<b></b>-<b></b>5<b></b>6<b></b>5<b></b>7<b></b>7<b></b>,<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>8<b></b>6<b></b>2<b></b>0<b></b>,<b></b> <b></b>"<b></b> <b></b>"<b></b>"<b></b>C<b></b>Á<b></b>N<b></b>U<b></b>L<b></b>A<b></b> <b></b>P<b></b>A<b></b>R<b></b>A<b></b> <b></b>T<b></b>R<b></b>A<b></b>Q<b></b>U<b></b>E<b></b>O<b></b>S<b></b>T<b></b>O<b></b>M<b></b>Í<b></b>A<b></b>:<b></b> <b></b> <b></b>F<b></b>E<b></b>N<b></b>E<b></b>S<b></b>T<b></b>R<b></b>A<b></b>D<b></b>A<b></b> <b></b>N<b></b>O<b></b>.<b></b> <b></b>8<b></b> <b></b>F<b></b>R<b></b>:<b></b> <b></b>C<b></b>Á<b></b>N<b></b>U<b></b>L<b></b>A<b></b> <b></b>E<b></b>X<b></b>T<b></b>E<b></b>R<b></b>N<b></b>A<b></b> <b></b>C<b></b>O<b></b>N<b></b> <b></b>B<b></b>A<b></b>L<b></b>Ó<b></b>N<b></b> <b></b>D<b></b>E<b></b> <b></b>B<b></b>A<b></b>J<b></b>A<b></b> <b></b>P<b></b>R<b></b>E<b></b>S<b></b>I<b></b>Ó<b></b>N<b></b>,<b></b> <b></b>E<b></b>N<b></b>D<b></b>O<b></b>C<b></b>Á<b></b>N<b></b>U<b></b>L<b></b>A<b></b> <b></b>F<b></b>E<b></b>N<b></b>E<b></b>S<b></b>T<b></b>R<b></b>A<b></b>D<b></b>A<b></b>,<b></b> <b></b>C<b></b>O<b></b>N<b></b> <b></b>C<b></b>I<b></b>N<b></b>T<b></b>A<b></b> <b></b>D<b></b>E<b></b> <b></b>F<b></b>I<b></b>J<b></b>A<b></b>C<b></b>I<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl04_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12820733</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl04_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl04_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl04_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl04_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl04_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl04_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl04_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL DR. JUAN JOSE AREVALO BERMEJO</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl04_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl04_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12820733&amp;o=4"><b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>N<b></b>O<b></b>.<b></b> <b></b>6<b></b>4<b></b>9<b></b>/<b></b>2<b></b>0<b></b>2<b></b>0<b></b>,<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>P<b></b>P<b></b>R<b></b> <b></b>6<b></b>7<b></b>1<b></b>8<b></b>6<b></b>-<b></b>8<b></b>0<b></b>6<b></b>6<b></b>3<b></b>,<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>8<b></b>8<b></b>1<b></b>1<b></b>,<b></b> <b></b>P<b></b>I<b></b>N<b></b>Z<b></b>A<b></b> <b></b>P<b></b>A<b></b>R<b></b>A<b></b> <b></b>R<b></b>E<b></b>T<b></b>I<b></b>R<b></b>A<b></b>R<b></b> <b></b>G<b></b>R<b></b>A<b></b>P<b></b>A<b></b>S<b></b> <b></b>D<b></b>E<b></b> <b></b>M<b></b>E<b></b>T<b></b>A<b></b>L<b></b> <b></b>E<b></b>M<b></b>P<b></b>A<b></b>Q<b></b>U<b></b>E<b></b> <b></b>I<b></b>N<b></b>D<b></b>I<b></b>V<b></b>I<b></b>D<b></b>U<b></b>A<b></b>L<b></b> <b></b>E<b></b>S<b></b>T<b></b>E<b></b>R<b></b>I<b></b>L<b></b> <b></b>D<b></b>E<b></b>S<b></b>C<b></b>A<b></b>R<b></b>T<b></b>A<b></b>B<b></b>L<b></b>E<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl05_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12827924</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl05_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl05_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl05_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl05_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl05_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl05_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl05_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL DR. JUAN JOSE AREVALO BERMEJO</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl05_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl05_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12827924&amp;o=4"><b></b>C<b></b>Ó<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>9<b></b>6<b></b>5<b></b>5<b></b>7<b></b>.<b></b> <b></b>C<b></b>Ó<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>P<b></b>P<b></b>R<b></b> <b></b>7<b></b>0<b></b>-<b></b>2<b></b>8<b></b>6<b></b>6<b></b>8<b></b>.<b></b> <b></b> <b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>4<b></b>6<b></b>2<b></b>-<b></b>2<b></b>0<b></b>2<b></b>0<b></b>.<b></b> <b></b>A<b></b>L<b></b>C<b></b>O<b></b>H<b></b>O<b></b>L<b></b> <b></b>E<b></b>T<b></b>I<b></b>L<b></b>I<b></b>C<b></b>O<b></b> <b></b>A<b></b>L<b></b> <b></b>7<b></b>0<b></b>%<b></b> <b></b>E<b></b>N<b></b> <b></b>G<b></b>E<b></b>L<b></b>.<b></b> <b></b>G<b></b>A<b></b>L<b></b>Ó<b></b>N<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Procedimientos Regulados por el artículo 44 LCE (Casos de Excepción)</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl06_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12759414</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl06_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl06_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>06.jul..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl06_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl06_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl06_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl06_Label7" title="Entidad que publica" style="font-weight:bold;">MUNICIPALIDAD DE MORAZAN, EL PROGRESO</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl06_Label8" title="Unidad compradora que publica" style="font-weight:bold;">DIRECCION MUNICIPAL DE PLANIFICACION</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl06_Label9" title="Categoría del concurso"><br>Construcción y materiales afines<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl06_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12759414&amp;o=4"><b></b>M<b></b>E<b></b>J<b></b>O<b></b>R<b></b>A<b></b>M<b></b>I<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>C<b></b>A<b></b>L<b></b>L<b></b>E<b></b> <b></b>C<b></b>O<b></b>N<b></b> <b></b>P<b></b>A<b></b>V<b></b>I<b></b>M<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>H<b></b>A<b></b>C<b></b>I<b></b>A<b></b> <b></b>E<b></b>L<b></b> <b></b>M<b></b>O<b></b>R<b></b>A<b></b>L<b></b> <b></b>(<b></b>S<b></b>E<b></b>C<b></b>T<b></b>O<b></b>R<b></b> <b></b>E<b></b>L<b></b> <b></b>D<b></b>E<b></b>S<b></b>E<b></b>C<b></b>H<b></b>O<b></b>)<b></b>,<b></b> <b></b>M<b></b>O<b></b>R<b></b>A<b></b>Z<b></b>A<b></b>N<b></b>,<b></b> <b></b>E<b></b>L<b></b>
+<b></b>P<b></b>R<b></b>O<b></b>G<b></b>R<b></b>E<b></b>S<b></b>O<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Cotización (Art. 38 LCE)</td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl07_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12830097</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl07_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl07_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl07_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl07_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl07_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl07_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl07_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL DR. JUAN JOSE AREVALO BERMEJO</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl07_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl07_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12830097&amp;o=4"><b></b>C<b></b>Ó<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>4<b></b>6<b></b>3<b></b>7<b></b>4<b></b>-<b></b>5<b></b>3<b></b>6<b></b>4<b></b>0<b></b>.<b></b> <b></b> <b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>4<b></b>7<b></b>2<b></b>-<b></b>2<b></b>0<b></b>2<b></b>0<b></b>.<b></b> <b></b> <b></b>C<b></b>a<b></b>r<b></b>r<b></b>o<b></b> <b></b>d<b></b>e<b></b> <b></b>r<b></b>e<b></b>s<b></b>u<b></b>c<b></b>i<b></b>t<b></b>a<b></b>c<b></b>i<b></b>ó<b></b>n<b></b> <b></b>d<b></b>e<b></b> <b></b>e<b></b>m<b></b>e<b></b>r<b></b>g<b></b>e<b></b>n<b></b>c<b></b>i<b></b>a<b></b> <b></b>A<b></b>l<b></b>t<b></b>o<b></b>;<b></b> <b></b>1<b></b>.<b></b>5<b></b> <b></b>M<b></b>e<b></b>t<b></b>r<b></b>o<b></b> <b></b>(<b></b>s<b></b>)<b></b>;<b></b> <b></b>A<b></b>n<b></b>c<b></b>h<b></b>o<b></b> <b></b>1<b></b>.<b></b>5<b></b> <b></b>M<b></b>e<b></b>t<b></b>r<b></b>o<b></b> <b></b>(<b></b>s<b></b>)<b></b>;<b></b> <b></b>C<b></b>o<b></b>n<b></b>t<b></b>i<b></b>e<b></b>n<b></b>e<b></b> <b></b>D<b></b>e<b></b>s<b></b>f<b></b>i<b></b>b<b></b>r<b></b>i<b></b>l<b></b>a<b></b>d<b></b>o<b></b>r<b></b>,<b></b> <b></b>s<b></b>o<b></b>n<b></b>d<b></b>a<b></b> <b></b>d<b></b>e<b></b> <b></b>a<b></b>s<b></b>p<b></b>i<b></b>r<b></b>a<b></b>c<b></b>i<b></b>ó<b></b>n<b></b>,<b></b> <b></b>t<b></b>u<b></b>b<b></b>o<b></b> <b></b>e<b></b>n<b></b>d<b></b>o<b></b>t<b></b>r<b></b>a<b></b>q<b></b>u<b></b>i<b></b>a<b></b>l<b></b>,<b></b> <b></b>t<b></b>u<b></b>b<b></b>o<b></b> <b></b>g<b></b>u<b></b>e<b></b>d<b></b>e<b></b>l<b></b>,<b></b> <b></b>l<b></b>a<b></b>r<b></b>i<b></b>n<b></b>g<b></b>o<b></b>s<b></b>c<b></b>o<b></b>p<b></b>i<b></b>o<b></b> <b></b>y<b></b> <b></b>l<b></b>u<b></b>b<b></b>r<b></b>i<b></b>c<b></b>a<b></b>n<b></b>t<b></b>e<b></b>;<b></b> <b></b>G<b></b>a<b></b>v<b></b>e<b></b>t<b></b>a<b></b>s<b></b>:<b></b> <b></b>4<b></b>;<b></b> <b></b>M<b></b>a<b></b>t<b></b>e<b></b>r<b></b>i<b></b>a<b></b>l<b></b>:<b></b> <b></b>A<b></b>c<b></b>e<b></b>r<b></b>o<b></b> <b></b>i<b></b>n<b></b>o<b></b>x<b></b>i<b></b>d<b></b>a<b></b>b<b></b>l<b></b>e<b></b>;<b></b> <b></b>p<b></b>r<b></b>o<b></b>f<b></b>.<b></b>.<b></b>.<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Procedimientos Regulados por el artículo 44 LCE (Casos de Excepción)</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl08_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12829838</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl08_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl08_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl08_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl08_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl08_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl08_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl08_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL DR. JUAN JOSE AREVALO BERMEJO</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl08_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl08_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12829838&amp;o=4"><b></b>C<b></b>Ó<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>4<b></b>9<b></b>8<b></b>0<b></b>6<b></b>-<b></b>5<b></b>8<b></b>3<b></b>8<b></b>6<b></b>.<b></b> <b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>4<b></b>7<b></b>1<b></b>-<b></b>2<b></b>0<b></b>2<b></b>0<b></b>.<b></b>U<b></b>L<b></b>T<b></b>R<b></b>A<b></b>S<b></b>O<b></b>N<b></b>I<b></b>D<b></b>O<b></b> <b></b>A<b></b>L<b></b>I<b></b>M<b></b>E<b></b>N<b></b>T<b></b>A<b></b>C<b></b>I<b></b>Ó<b></b>N<b></b>:<b></b> <b></b>1<b></b>1<b></b>0<b></b> <b></b>v<b></b> <b></b>6<b></b>0<b></b> <b></b>h<b></b>z<b></b>;<b></b> <b></b>c<b></b>a<b></b>p<b></b>a<b></b>c<b></b>i<b></b>d<b></b>a<b></b>d<b></b> <b></b>d<b></b>e<b></b> <b></b>a<b></b>l<b></b>m<b></b>a<b></b>c<b></b>e<b></b>n<b></b>a<b></b>m<b></b>i<b></b>e<b></b>n<b></b>t<b></b>o<b></b>:<b></b> <b></b>1<b></b>0<b></b>,<b></b>0<b></b>0<b></b>0<b></b> <b></b>i<b></b>m<b></b>á<b></b>g<b></b>e<b></b>n<b></b>e<b></b>s<b></b> <b></b>e<b></b>n<b></b> <b></b>f<b></b>o<b></b>r<b></b>m<b></b>a<b></b> <b></b>j<b></b>p<b></b>g<b></b>,<b></b> <b></b>c<b></b>o<b></b>n<b></b>e<b></b>x<b></b>i<b></b>ó<b></b>n<b></b>:<b></b> <b></b>I<b></b>m<b></b>p<b></b>r<b></b>e<b></b>s<b></b>o<b></b>r<b></b>a<b></b> <b></b>y<b></b> <b></b>v<b></b>i<b></b>d<b></b>e<b></b>o<b></b>:<b></b> <b></b>F<b></b>r<b></b>e<b></b>c<b></b>u<b></b>e<b></b>n<b></b>c<b></b>i<b></b>a<b></b>:<b></b> <b></b>5<b></b>;<b></b> <b></b>P<b></b>a<b></b>n<b></b>t<b></b>a<b></b>l<b></b>l<b></b>a<b></b>:<b></b> <b></b>L<b></b>c<b></b>d<b></b>;<b></b> <b></b>P<b></b>r<b></b>o<b></b>f<b></b>u<b></b>n<b></b>d<b></b>i<b></b>d<b></b>a<b></b>d<b></b> <b></b>d<b></b>e<b></b> <b></b>e<b></b>s<b></b>c<b></b>a<b></b>n<b></b>e<b></b>o<b></b>:<b></b> <b></b>F<b></b>r<b></b> <b></b>2<b></b>3<b></b>0<b></b> <b></b>m<b></b>m<b></b> <b></b>h<b></b>a<b></b>s<b></b>t<b></b>a<b></b> <b></b>3<b></b>2<b></b>0<b></b> <b></b>m<b></b>m<b></b>,<b></b> <b></b>S<b></b>o<b></b>f<b></b>t<b></b>w<b></b>a<b></b>r<b></b>e<b></b> <b></b>:<b></b> <b></b>b<b></b>á<b></b>s<b></b>i<b></b>c<b></b>o<b></b>;<b></b> <b></b>T<b></b>r<b></b>a<b></b>n<b></b>s<b></b>d<b></b>.<b></b>.<b></b>.<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Procedimientos Regulados por el artículo 44 LCE (Casos de Excepción)</td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl09_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12829730</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl09_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl09_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl09_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl09_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl09_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl09_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl09_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL DR. JUAN JOSE AREVALO BERMEJO</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl09_Label9" title="Categoría del concurso"><br>Otros tipos de bienes o servicios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl09_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12829730&amp;o=4"><b></b>C<b></b>Ó<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>4<b></b>2<b></b>3<b></b>2<b></b>7<b></b>-<b></b>4<b></b>7<b></b>9<b></b>5<b></b>4<b></b>.<b></b> <b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>4<b></b>7<b></b>0<b></b>-<b></b>2<b></b>0<b></b>2<b></b>0<b></b>.<b></b> <b></b> <b></b>E<b></b>S<b></b>C<b></b>A<b></b>L<b></b>E<b></b>R<b></b>A<b></b>,<b></b> <b></b>A<b></b>L<b></b>T<b></b>O<b></b> <b></b>4<b></b> <b></b>P<b></b>I<b></b>E<b></b>S<b></b> <b></b>(<b></b>s<b></b>)<b></b>:<b></b> <b></b>A<b></b>N<b></b>T<b></b>I<b></b>D<b></b>E<b></b>S<b></b>L<b></b>I<b></b>Z<b></b>A<b></b>N<b></b>T<b></b>E<b></b> <b></b>E<b></b>N<b></b> <b></b>L<b></b>A<b></b>S<b></b> <b></b>P<b></b>A<b></b>T<b></b>A<b></b>S<b></b> <b></b>D<b></b>E<b></b> <b></b>S<b></b>O<b></b>P<b></b>O<b></b>R<b></b>T<b></b>E<b></b>;<b></b> <b></b>S<b></b>I<b></b>;<b></b>F<b></b>O<b></b>R<b></b>M<b></b>A<b></b> <b></b>D<b></b>O<b></b>B<b></b>L<b></b>E<b></b> <b></b>B<b></b>A<b></b>N<b></b>D<b></b>A<b></b>,<b></b> <b></b>M<b></b>A<b></b>T<b></b>E<b></b>R<b></b>I<b></b>A<b></b>L<b></b>:<b></b> <b></b>A<b></b>L<b></b>U<b></b>M<b></b>I<b></b>N<b></b>I<b></b>O<b></b>,<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Procedimientos Regulados por el artículo 44 LCE (Casos de Excepción)</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl10_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12829056</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl10_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl10_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl10_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl10_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl10_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl10_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl10_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL DR. JUAN JOSE AREVALO BERMEJO</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl10_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl10_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12829056&amp;o=4"><b></b>C<b></b>Ó<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>7<b></b>5<b></b>9<b></b>0<b></b>4<b></b>.<b></b> <b></b> <b></b>C<b></b>Ó<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>P<b></b>P<b></b>R<b></b> <b></b>1<b></b>2<b></b>4<b></b>1<b></b>1<b></b>6<b></b>-<b></b>1<b></b>4<b></b>4<b></b>7<b></b>6<b></b>8<b></b>.<b></b> <b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>4<b></b>6<b></b>9<b></b>-<b></b>2<b></b>0<b></b>2<b></b>0<b></b>.<b></b> <b></b> <b></b>T<b></b>R<b></b>A<b></b>J<b></b>E<b></b> <b></b>R<b></b>E<b></b>S<b></b>I<b></b>S<b></b>T<b></b>E<b></b>N<b></b>T<b></b>E<b></b> <b></b>O<b></b> <b></b>I<b></b>M<b></b>P<b></b>E<b></b>R<b></b>M<b></b>E<b></b>A<b></b>B<b></b>L<b></b>E<b></b> <b></b>A<b></b> <b></b>F<b></b>L<b></b>U<b></b>I<b></b>D<b></b>O<b></b>S<b></b>,<b></b> <b></b>Q<b></b>U<b></b>E<b></b> <b></b>P<b></b>E<b></b>R<b></b>M<b></b>I<b></b>T<b></b>A<b></b> <b></b>L<b></b>A<b></b> <b></b>T<b></b>R<b></b>A<b></b>N<b></b>S<b></b>P<b></b>I<b></b>R<b></b>A<b></b>B<b></b>I<b></b>L<b></b>I<b></b>D<b></b>A<b></b>D<b></b>,<b></b> <b></b>C<b></b>O<b></b>N<b></b> <b></b>C<b></b>A<b></b>P<b></b>U<b></b>C<b></b>H<b></b>A<b></b> <b></b>I<b></b>N<b></b>T<b></b>E<b></b>G<b></b>R<b></b>A<b></b>D<b></b>A<b></b> <b></b> <b></b>A<b></b>J<b></b>U<b></b>S<b></b>T<b></b>A<b></b>B<b></b>L<b></b>E<b></b> <b></b>D<b></b>I<b></b>S<b></b>E<b></b>Ñ<b></b>A<b></b>D<b></b>A<b></b> <b></b>P<b></b>A<b></b>R<b></b>A<b></b> <b></b>R<b></b>O<b></b>D<b></b>E<b></b>A<b></b>R<b></b> <b></b>P<b></b>E<b></b>R<b></b>F<b></b>E<b></b>C<b></b>T<b></b>A<b></b>M<b></b>E<b></b>N<b></b>T<b></b>E<b></b> <b></b>U<b></b>N<b></b> <b></b>R<b></b>E<b></b>S<b></b>P<b></b>I<b></b>R<b></b>A<b></b>D<b></b>O<b></b>R<b></b> <b></b>D<b></b>E<b></b> <b></b>C<b></b>A<b></b>R<b></b>A<b></b> <b></b>C<b></b>O<b></b>M<b></b>P<b></b>L<b></b>E<b></b>T<b></b>A<b></b>.<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Procedimientos Regulados por el artículo 44 LCE (Casos de Excepción)</td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl11_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12828696</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl11_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl11_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl11_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl11_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl11_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl11_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl11_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL DR. JUAN JOSE AREVALO BERMEJO</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl11_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl11_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12828696&amp;o=4"><b></b>C<b></b>Ó<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>7<b></b>5<b></b>8<b></b>9<b></b>9<b></b>.<b></b> <b></b>C<b></b>Ó<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>P<b></b>P<b></b>R<b></b> <b></b>5<b></b>4<b></b>5<b></b>5<b></b>7<b></b>-<b></b>6<b></b>4<b></b>3<b></b>4<b></b>1<b></b>.<b></b> <b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>4<b></b>6<b></b>8<b></b>-<b></b>2<b></b>0<b></b>2<b></b>0<b></b>.<b></b> <b></b> <b></b>P<b></b>R<b></b>O<b></b>T<b></b>E<b></b>C<b></b>T<b></b>O<b></b>R<b></b> <b></b>F<b></b>A<b></b>C<b></b>I<b></b>A<b></b>L<b></b> <b></b>H<b></b>E<b></b>C<b></b>H<b></b>O<b></b> <b></b>D<b></b>E<b></b> <b></b>P<b></b>L<b></b>A<b></b>S<b></b>T<b></b>I<b></b>C<b></b>O<b></b> <b></b>T<b></b>R<b></b>A<b></b>N<b></b>S<b></b>P<b></b>A<b></b>R<b></b>E<b></b>N<b></b>T<b></b>E<b></b> <b></b>C<b></b>O<b></b>N<b></b> <b></b>B<b></b>A<b></b>N<b></b>D<b></b>A<b></b> <b></b>A<b></b>J<b></b>U<b></b>S<b></b>T<b></b>A<b></b>B<b></b>L<b></b>E<b></b>F<b></b>I<b></b>R<b></b>M<b></b>E<b></b>N<b></b>T<b></b>E<b></b> <b></b>A<b></b>L<b></b>R<b></b>E<b></b>D<b></b>E<b></b>D<b></b>O<b></b>R<b></b> <b></b>D<b></b>E<b></b> <b></b>L<b></b>A<b></b> <b></b>C<b></b>A<b></b>B<b></b>E<b></b>Z<b></b>A<b></b> <b></b>Y<b></b> <b></b>A<b></b>J<b></b>U<b></b>S<b></b>T<b></b>A<b></b>R<b></b>S<b></b>E<b></b> <b></b>C<b></b>O<b></b>M<b></b>O<b></b>D<b></b>A<b></b>M<b></b>E<b></b>N<b></b>T<b></b>E<b></b> <b></b>C<b></b>O<b></b>N<b></b>T<b></b>R<b></b>A<b></b> <b></b>L<b></b>A<b></b> <b></b>F<b></b>R<b></b>E<b></b>N<b></b>T<b></b>E<b></b>,<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Procedimientos Regulados por el artículo 44 LCE (Casos de Excepción)</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl12_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12828572</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl12_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl12_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl12_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl12_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl12_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl12_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl12_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL DR. JUAN JOSE AREVALO BERMEJO</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl12_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl12_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12828572&amp;o=4"><b></b>C<b></b>Ó<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>1<b></b>5<b></b>2<b></b>2<b></b>0<b></b>.<b></b> <b></b>C<b></b>Ó<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>P<b></b>P<b></b>R<b></b> <b></b>4<b></b>7<b></b>8<b></b>0<b></b>0<b></b>-<b></b>5<b></b>5<b></b>7<b></b>2<b></b>1<b></b>.<b></b> <b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>4<b></b>6<b></b>7<b></b>-<b></b>2<b></b>0<b></b>2<b></b>0<b></b>.<b></b> <b></b> <b></b>"<b></b>M<b></b>A<b></b>S<b></b>C<b></b>A<b></b>R<b></b>I<b></b>L<b></b>L<b></b>A<b></b> <b></b>N<b></b>A<b></b>S<b></b>O<b></b> <b></b>B<b></b>U<b></b>C<b></b>A<b></b>L<b></b> <b></b>P<b></b>R<b></b>O<b></b>T<b></b>E<b></b>C<b></b>T<b></b>O<b></b>R<b></b>A<b></b>,<b></b> <b></b>D<b></b>E<b></b>S<b></b>C<b></b>A<b></b>R<b></b>T<b></b>A<b></b>B<b></b>L<b></b>E<b></b> <b></b>D<b></b>E<b></b> <b></b>3<b></b> <b></b>C<b></b>A<b></b>P<b></b>A<b></b>S<b></b> <b></b>C<b></b>O<b></b>N<b></b> <b></b>F<b></b>I<b></b>U<b></b>L<b></b>T<b></b>R<b></b>O<b></b> <b></b>A<b></b>N<b></b>T<b></b>I<b></b>C<b></b>O<b></b>N<b></b>T<b></b>A<b></b>M<b></b>I<b></b>N<b></b>A<b></b>N<b></b>T<b></b>E<b></b> <b></b>I<b></b>N<b></b>C<b></b>O<b></b>R<b></b>P<b></b>O<b></b>R<b></b>A<b></b>D<b></b>O<b></b>,<b></b> <b></b>C<b></b>I<b></b>N<b></b>T<b></b>A<b></b>S<b></b> <b></b>E<b></b>L<b></b>A<b></b>S<b></b>T<b></b>I<b></b>C<b></b>A<b></b>S<b></b>,<b></b> <b></b>T<b></b>I<b></b>P<b></b>O<b></b> <b></b>N<b></b> <b></b>9<b></b>5<b></b>"<b></b>.<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Procedimientos Regulados por el artículo 44 LCE (Casos de Excepción)</td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl13_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12828467</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl13_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl13_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl13_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl13_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl13_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl13_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl13_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL DR. JUAN JOSE AREVALO BERMEJO</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl13_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl13_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12828467&amp;o=4"><b></b>C<b></b>Ó<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>7<b></b>5<b></b>8<b></b>9<b></b>7<b></b>.<b></b> <b></b>C<b></b>Ó<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>P<b></b>P<b></b>R<b></b> <b></b>1<b></b>2<b></b>5<b></b>5<b></b>1<b></b>7<b></b>-<b></b>1<b></b>4<b></b>6<b></b>4<b></b>3<b></b>4<b></b>.<b></b> <b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>4<b></b>6<b></b>6<b></b>-<b></b>2<b></b>0<b></b>2<b></b>0<b></b>.<b></b> <b></b> <b></b>C<b></b>O<b></b>R<b></b>O<b></b>N<b></b>A<b></b>V<b></b>I<b></b>R<b></b>U<b></b>S<b></b> <b></b>S<b></b>A<b></b>R<b></b>S<b></b>-<b></b>C<b></b>O<b></b>V<b></b>2<b></b>-<b></b>G<b></b>E<b></b>N<b></b>E<b></b>,<b></b> <b></b>D<b></b>E<b></b>T<b></b>E<b></b>C<b></b>C<b></b>I<b></b>O<b></b>N<b></b> <b></b>P<b></b>O<b></b>R<b></b> <b></b>B<b></b>I<b></b>O<b></b>L<b></b>O<b></b>G<b></b>I<b></b>A<b></b> <b></b>M<b></b>O<b></b>L<b></b>E<b></b>C<b></b>U<b></b>L<b></b>A<b></b>R<b></b> <b></b>-<b></b>P<b></b>R<b></b>U<b></b>E<b></b>B<b></b>A<b></b>-<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Procedimientos Regulados por el artículo 44 LCE (Casos de Excepción)</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl14_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12828416</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl14_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl14_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl14_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl14_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl14_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl14_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl14_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL DR. JUAN JOSE AREVALO BERMEJO</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl14_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl14_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12828416&amp;o=4"><b></b>C<b></b>Ó<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>1<b></b>2<b></b>8<b></b>9<b></b>1<b></b>.<b></b> <b></b>C<b></b>Ó<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>P<b></b>P<b></b>R<b></b> <b></b>6<b></b>6<b></b>4<b></b>0<b></b>3<b></b>-<b></b>7<b></b>9<b></b>7<b></b>8<b></b>4<b></b>.<b></b> <b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>4<b></b>6<b></b>5<b></b>-<b></b>2<b></b>0<b></b>2<b></b>0<b></b>.<b></b> <b></b> <b></b>P<b></b>A<b></b>N<b></b>E<b></b>L<b></b> <b></b>P<b></b>A<b></b>R<b></b>A<b></b> <b></b>L<b></b>A<b></b> <b></b>D<b></b>E<b></b>T<b></b>E<b></b>R<b></b>M<b></b>I<b></b>N<b></b>A<b></b>C<b></b>I<b></b>Ó<b></b>N<b></b> <b></b>C<b></b>U<b></b>A<b></b>N<b></b>T<b></b>I<b></b>T<b></b>A<b></b>T<b></b>I<b></b>V<b></b>A<b></b> <b></b>D<b></b>E<b></b> <b></b>B<b></b>N<b></b>P<b></b>,<b></b> <b></b>C<b></b>K<b></b>M<b></b>B<b></b>,<b></b> <b></b>M<b></b>I<b></b>O<b></b>G<b></b>L<b></b>O<b></b>B<b></b>I<b></b>N<b></b>A<b></b>,<b></b> <b></b>T<b></b>R<b></b>O<b></b>P<b></b>O<b></b>N<b></b>I<b></b>N<b></b>A<b></b> <b></b>I<b></b> <b></b>Y<b></b> <b></b>D<b></b>I<b></b>M<b></b>E<b></b>R<b></b>O<b></b> <b></b>D<b></b>,<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Procedimientos Regulados por el artículo 44 LCE (Casos de Excepción)</td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl15_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12830208</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl15_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl15_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>22.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl15_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl15_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl15_Label6" title="Estatus del concurso" class="TablaItemNormal">Terminado adjudicado</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl15_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO NACIONAL DE ELECTRIFICACIÓN -INDE</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl15_Label8" title="Unidad compradora que publica" style="font-weight:bold;">GERENCIA SERVICIOS CORPORATIVOS</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl15_Label9" title="Categoría del concurso"><br>Otros tipos de bienes o servicios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl15_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12830208&amp;o=4"><b></b>C<b></b>O<b></b>N<b></b>T<b></b>R<b></b>A<b></b>T<b></b>A<b></b>C<b></b>I<b></b>Ó<b></b>N<b></b> <b></b>D<b></b>I<b></b>R<b></b>E<b></b>C<b></b>T<b></b>A<b></b> <b></b>D<b></b>E<b></b> <b></b>S<b></b>E<b></b>R<b></b>V<b></b>I<b></b>C<b></b>I<b></b>O<b></b>S<b></b> <b></b>P<b></b>R<b></b>O<b></b>F<b></b>E<b></b>S<b></b>I<b></b>O<b></b>N<b></b>A<b></b>L<b></b>E<b></b>S<b></b> <b></b>D<b></b>E<b></b> <b></b>L<b></b>A<b></b> <b></b>D<b></b>I<b></b>V<b></b>I<b></b>S<b></b>I<b></b>Ó<b></b>N<b></b> <b></b>D<b></b>E<b></b> <b></b>S<b></b>E<b></b>G<b></b>U<b></b>R<b></b>I<b></b>D<b></b>A<b></b>D<b></b> <b></b>C<b></b>O<b></b>R<b></b>P<b></b>O<b></b>R<b></b>A<b></b>T<b></b>I<b></b>V<b></b>A<b></b>.<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Procedimientos regulados por el artículo 54 LCE</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl16_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12828319</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl16_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl16_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl16_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl16_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl16_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl16_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl16_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL DR. JUAN JOSE AREVALO BERMEJO</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl16_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl16_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12828319&amp;o=4"><b></b>C<b></b>Ó<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>1<b></b>2<b></b>8<b></b>9<b></b>1<b></b>.<b></b> <b></b>C<b></b>Ó<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>P<b></b>P<b></b>R<b></b> <b></b>6<b></b>6<b></b>4<b></b>0<b></b>3<b></b>-<b></b>7<b></b>9<b></b>7<b></b>8<b></b>4<b></b>.<b></b> <b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>4<b></b>6<b></b>4<b></b>-<b></b>2<b></b>0<b></b>2<b></b>0<b></b>.<b></b> <b></b>P<b></b>A<b></b>N<b></b>E<b></b>L<b></b> <b></b>P<b></b>A<b></b>R<b></b>A<b></b> <b></b>L<b></b>A<b></b> <b></b>D<b></b>E<b></b>T<b></b>E<b></b>R<b></b>M<b></b>I<b></b>N<b></b>A<b></b>C<b></b>I<b></b>Ó<b></b>N<b></b> <b></b>C<b></b>U<b></b>A<b></b>N<b></b>T<b></b>I<b></b>T<b></b>A<b></b>T<b></b>I<b></b>V<b></b>A<b></b> <b></b>D<b></b>E<b></b> <b></b>B<b></b>N<b></b>P<b></b>,<b></b> <b></b>C<b></b>K<b></b>M<b></b>B<b></b>,<b></b> <b></b> <b></b>M<b></b>I<b></b>O<b></b>G<b></b>L<b></b>O<b></b>B<b></b>I<b></b>N<b></b>A<b></b>,<b></b> <b></b>T<b></b>R<b></b>O<b></b>P<b></b>O<b></b>N<b></b>I<b></b>N<b></b>A<b></b> <b></b>I<b></b> <b></b>Y<b></b> <b></b>D<b></b>I<b></b>M<b></b>E<b></b>R<b></b>O<b></b> <b></b>D<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Procedimientos Regulados por el artículo 44 LCE (Casos de Excepción)</td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl17_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12801208</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl17_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl17_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl17_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl17_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl17_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl17_Label7" title="Entidad que publica" style="font-weight:bold;">MINISTERIO DE SALUD PÚBLICA</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl17_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL GENERAL TIPO I DE TECPAN GUATEMALA</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl17_Label9" title="Categoría del concurso"><br>Electricidad y aire acondicionado<b> | </b>Otros tipos de bienes o servicios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl17_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12801208&amp;o=4"><b></b>A<b></b>D<b></b>Q<b></b>U<b></b>I<b></b>S<b></b>I<b></b>C<b></b>I<b></b>Ó<b></b>N<b></b> <b></b>D<b></b>E<b></b> <b></b>P<b></b>L<b></b>A<b></b>N<b></b>T<b></b>A<b></b> <b></b>G<b></b>E<b></b>N<b></b>E<b></b>R<b></b>A<b></b>D<b></b>O<b></b>R<b></b>A<b></b> <b></b>D<b></b>E<b></b> <b></b>E<b></b>L<b></b>E<b></b>C<b></b>T<b></b>R<b></b>I<b></b>C<b></b>I<b></b>D<b></b>A<b></b>D<b></b> <b></b>P<b></b>A<b></b>R<b></b>A<b></b> <b></b>E<b></b>L<b></b> <b></b>H<b></b>O<b></b>S<b></b>P<b></b>I<b></b>T<b></b>A<b></b>L<b></b> <b></b>G<b></b>E<b></b>N<b></b>E<b></b>R<b></b>A<b></b>L<b></b> <b></b>T<b></b>I<b></b>P<b></b>O<b></b> <b></b>I<b></b> <b></b>D<b></b>E<b></b> <b></b>T<b></b>E<b></b>C<b></b>P<b></b>A<b></b>N<b></b> <b></b>G<b></b>U<b></b>A<b></b>T<b></b>E<b></b>M<b></b>A<b></b>L<b></b>A<b></b>,<b></b> <b></b>C<b></b>H<b></b>I<b></b>M<b></b>A<b></b>L<b></b>T<b></b>E<b></b>N<b></b>A<b></b>N<b></b>G<b></b>O<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Procedimientos Regulados por el artículo 44 LCE (Casos de Excepción)</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl18_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12828149</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl18_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl18_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl18_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl18_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl18_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl18_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl18_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL DR. JUAN JOSE AREVALO BERMEJO</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl18_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl18_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12828149&amp;o=4"><b></b>C<b></b>Ó<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>7<b></b>5<b></b>9<b></b>1<b></b>0<b></b>.<b></b> <b></b>C<b></b>Ó<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>P<b></b>P<b></b>R<b></b> <b></b>1<b></b>2<b></b>6<b></b>8<b></b>7<b></b>5<b></b>-<b></b>1<b></b>4<b></b>8<b></b>0<b></b>2<b></b>0<b></b>.<b></b> <b></b> <b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>4<b></b>6<b></b>3<b></b>-<b></b>2<b></b>0<b></b>2<b></b>0<b></b>.<b></b> <b></b>D<b></b>E<b></b>T<b></b>E<b></b>C<b></b>C<b></b>I<b></b>O<b></b>N<b></b> <b></b>D<b></b>E<b></b> <b></b>A<b></b>N<b></b>T<b></b>I<b></b>G<b></b>E<b></b>N<b></b>O<b></b> <b></b>V<b></b>I<b></b>R<b></b>A<b></b>L<b></b> <b></b>S<b></b>A<b></b>R<b></b>S<b></b>-<b></b>C<b></b>O<b></b>V<b></b>I<b></b>D<b></b>-<b></b>2<b></b> <b></b>E<b></b>N<b></b> <b></b>H<b></b>I<b></b>S<b></b>O<b></b>P<b></b>A<b></b>D<b></b>O<b></b> <b></b>P<b></b>A<b></b>R<b></b>A<b></b> <b></b>P<b></b>R<b></b>U<b></b>E<b></b>B<b></b>A<b></b> <b></b>R<b></b>A<b></b>P<b></b>I<b></b>D<b></b>A<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Procedimientos Regulados por el artículo 44 LCE (Casos de Excepción)</td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl19_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12830186</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl19_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl19_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl19_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl19_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl19_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl19_Label7" title="Entidad que publica" style="font-weight:bold;">MINISTERIO DE SALUD PÚBLICA</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl19_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL DE INFECTOLOGÍA Y REHABILITACIÓN</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl19_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl19_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12830186&amp;o=4"><b></b>M<b></b>S<b></b>P<b></b>A<b></b>S<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>2<b></b>0<b></b>2<b></b>0<b></b>-<b></b>I<b></b>N<b></b>F<b></b>-<b></b>C<b></b>E<b></b>1<b></b>0<b></b>5<b></b> <b></b>A<b></b>D<b></b>Q<b></b>U<b></b>I<b></b>S<b></b>I<b></b>C<b></b>I<b></b>O<b></b>N<b></b> <b></b>D<b></b>E<b></b> <b></b>P<b></b>A<b></b>Q<b></b>U<b></b>E<b></b>T<b></b>E<b></b> <b></b>D<b></b>E<b></b> <b></b>R<b></b>O<b></b>P<b></b>A<b></b> <b></b>T<b></b>A<b></b>L<b></b>L<b></b>A<b></b> <b></b>M<b></b> <b></b>P<b></b>A<b></b>R<b></b>A<b></b> <b></b>E<b></b>L<b></b> <b></b>H<b></b>O<b></b>S<b></b>P<b></b>I<b></b>T<b></b>A<b></b>L<b></b> <b></b>I<b></b>N<b></b>F<b></b>A<b></b>N<b></b>T<b></b>I<b></b>L<b></b> <b></b>D<b></b>E<b></b> <b></b>I<b></b>N<b></b>F<b></b>E<b></b>C<b></b>T<b></b>O<b></b>L<b></b>O<b></b>G<b></b>I<b></b>A<b></b> <b></b>Y<b></b> <b></b>R<b></b>E<b></b>H<b></b>A<b></b>B<b></b>I<b></b>L<b></b>I<b></b>T<b></b>A<b></b>C<b></b>I<b></b>O<b></b>N<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Procedimientos Regulados por el artículo 44 LCE (Casos de Excepción)</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl20_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12696382</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl20_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl20_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>06.jul..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl20_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl20_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl20_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl20_Label7" title="Entidad que publica" style="font-weight:bold;">MUNICIPALIDAD DE SANTA CATALINA LA TINTA, ALTA VERAPAZ</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl20_Label8" title="Unidad compradora que publica" style="font-weight:bold;">OMP LA TINTA</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl20_Label9" title="Categoría del concurso"><br>Construcción y materiales afines<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl20_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12696382&amp;o=4"><b></b>A<b></b>M<b></b>P<b></b>L<b></b>I<b></b>A<b></b>C<b></b>I<b></b>O<b></b>N<b></b> <b></b>E<b></b>S<b></b>C<b></b>U<b></b>E<b></b>L<b></b>A<b></b> <b></b>P<b></b>R<b></b>I<b></b>M<b></b>A<b></b>R<b></b>I<b></b>A<b></b> <b></b>C<b></b>A<b></b>S<b></b>E<b></b>R<b></b>I<b></b>O<b></b> <b></b>S<b></b>A<b></b>N<b></b> <b></b>V<b></b>I<b></b>C<b></b>E<b></b>N<b></b>T<b></b>E<b></b> <b></b>I<b></b>,<b></b> <b></b>S<b></b>A<b></b>N<b></b>T<b></b>A<b></b> <b></b>C<b></b>A<b></b>T<b></b>A<b></b>L<b></b>I<b></b>N<b></b>A<b></b> <b></b>L<b></b>A<b></b> <b></b>T<b></b>I<b></b>N<b></b>T<b></b>A<b></b>,<b></b> <b></b>A<b></b>L<b></b>T<b></b>A<b></b> <b></b>V<b></b>E<b></b>R<b></b>A<b></b>P<b></b>A<b></b>Z<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Cotización (Art. 38 LCE)</td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl21_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12808091</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl21_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl21_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>23.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl21_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl21_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl21_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl21_Label7" title="Entidad que publica" style="font-weight:bold;">MINISTERIO DE SALUD PÚBLICA</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl21_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL REGIONAL DE OCCIDENTE QUETZALTENANGO</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl21_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl21_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12808091&amp;o=4"><b></b>C<b></b>o<b></b>m<b></b>p<b></b>r<b></b>a<b></b> <b></b>d<b></b>e<b></b> <b></b>O<b></b>x<b></b>i<b></b>d<b></b>o<b></b> <b></b>d<b></b>e<b></b> <b></b>e<b></b>t<b></b>i<b></b>l<b></b>e<b></b>n<b></b>o<b></b> <b></b>p<b></b>a<b></b>r<b></b>a<b></b> <b></b>e<b></b>l<b></b> <b></b> <b></b>H<b></b>o<b></b>s<b></b>p<b></b>i<b></b>t<b></b>a<b></b>l<b></b> <b></b>T<b></b>e<b></b>m<b></b>p<b></b>o<b></b>r<b></b>a<b></b>l<b></b> <b></b>C<b></b>O<b></b>V<b></b>I<b></b>D<b></b>-<b></b>1<b></b>9<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Procedimientos Regulados por el artículo 44 LCE (Casos de Excepción)</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl22_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12829951</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl22_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl22_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>22.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl22_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl22_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl22_Label6" title="Estatus del concurso" class="TablaItemNormal">En evaluación</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl22_Label7" title="Entidad que publica" style="font-weight:bold;">SECRETARÍA DE BIENESTAR SOCIAL DE LA PRESIDENCIA DE LA REPÚBLICA</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl22_Label8" title="Unidad compradora que publica" style="font-weight:bold;">SECRETARIA DE BIENESTAR SOCIAL DE LA PRESIDENCIA</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl22_Label9" title="Categoría del concurso"><br>Otros tipos de bienes o servicios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl22_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12829951&amp;o=4"><b></b>A<b></b>R<b></b>R<b></b>E<b></b>N<b></b>D<b></b>A<b></b>M<b></b>I<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>D<b></b>E<b></b> <b></b>B<b></b>I<b></b>E<b></b>N<b></b> <b></b>I<b></b>N<b></b>M<b></b>U<b></b>E<b></b>B<b></b>L<b></b>E<b></b> <b></b>P<b></b>A<b></b>R<b></b>A<b></b> <b></b>E<b></b>L<b></b> <b></b>F<b></b>U<b></b>N<b></b>C<b></b>I<b></b>O<b></b>N<b></b>A<b></b>M<b></b>I<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>D<b></b>E<b></b>L<b></b> <b></b>P<b></b>R<b></b>O<b></b>G<b></b>R<b></b>A<b></b>M<b></b>A<b></b> <b></b>E<b></b>S<b></b>P<b></b>E<b></b>C<b></b>I<b></b>A<b></b>L<b></b>I<b></b>Z<b></b>A<b></b>D<b></b>O<b></b> <b></b>P<b></b>A<b></b>R<b></b>A<b></b> <b></b>N<b></b>I<b></b>Ñ<b></b>E<b></b>Z<b></b> <b></b>Y<b></b> <b></b>A<b></b>D<b></b>O<b></b>L<b></b>E<b></b>S<b></b>C<b></b>E<b></b>N<b></b>C<b></b>I<b></b>A<b></b> <b></b>V<b></b>Í<b></b>C<b></b>T<b></b>I<b></b>M<b></b>A<b></b>S<b></b> <b></b>D<b></b>E<b></b> <b></b>V<b></b>I<b></b>O<b></b>L<b></b>E<b></b>N<b></b>C<b></b>I<b></b>A<b></b> <b></b>S<b></b>E<b></b>X<b></b>U<b></b>A<b></b>L<b></b>,<b></b> <b></b>E<b></b>X<b></b>P<b></b>L<b></b>O<b></b>T<b></b>A<b></b>C<b></b>I<b></b>Ó<b></b>N<b></b> <b></b>Y<b></b> <b></b>T<b></b>R<b></b>A<b></b>T<b></b>A<b></b> <b></b>D<b></b>E<b></b> <b></b>P<b></b>E<b></b>R<b></b>S<b></b>O<b></b>N<b></b>A<b></b>S<b></b> <b></b>-<b></b>G<b></b>U<b></b>A<b></b>T<b></b>E<b></b>M<b></b>A<b></b>L<b></b>A<b></b>-<b></b> <b></b>A<b></b> <b></b>C<b></b>A<b></b>R<b></b>G<b></b>O<b></b> <b></b>D<b></b>E<b></b> <b></b>L<b></b>A<b></b> <b></b>D<b></b>I<b></b>R<b></b>E<b></b>C<b></b>C<b></b>I<b></b>Ó<b></b>N<b></b> <b></b>D<b></b>E<b></b> <b></b>P<b></b>R<b></b>O<b></b>T<b></b>E<b></b>C<b></b>C<b></b>I<b></b>Ó<b></b>N<b></b> <b></b>E<b></b>S<b></b>P<b></b>E<b></b>C<b></b>I<b></b>A<b></b>L<b></b>,<b></b> <b></b>A<b></b>C<b></b>O<b></b>G<b></b>I<b></b>M<b></b>I<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>F<b></b>A<b></b>M<b></b>I<b></b>L<b></b>I<b></b>A<b></b>R<b></b> <b></b>Y<b></b> <b></b>R<b></b>E<b></b>S<b></b>I<b></b>D<b></b>E<b></b>N<b></b>C<b></b>I<b></b>A<b></b>L<b></b>,<b></b> <b></b>P<b></b>O<b></b>R<b></b> <b></b>E<b></b>.<b></b>.<b></b>.<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Arrendamiento o Adquisición de Bienes Inmuebles (Art.43 inciso e)</td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl23_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12808121</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl23_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl23_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl23_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl23_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl23_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl23_Label7" title="Entidad que publica" style="font-weight:bold;">MINISTERIO DE SALUD PÚBLICA</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl23_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL REGIONAL DE OCCIDENTE QUETZALTENANGO</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl23_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl23_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12808121&amp;o=4"><b></b>C<b></b>o<b></b>m<b></b>p<b></b>r<b></b>a<b></b> <b></b>d<b></b>e<b></b> <b></b>O<b></b>x<b></b>i<b></b>d<b></b>o<b></b> <b></b>d<b></b>e<b></b> <b></b>e<b></b>t<b></b>i<b></b>l<b></b>e<b></b>n<b></b>o<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl24_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12216682</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl24_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl24_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>25.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl24_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl24_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl24_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl24_Label7" title="Entidad que publica" style="font-weight:bold;">MUNICIPALIDAD DE GUATEMALA, GUATEMALA</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl24_Label8" title="Unidad compradora que publica" style="font-weight:bold;">DIRECCION DE EDUCACION Y CULTURA</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl24_Label9" title="Categoría del concurso"><br>Papelería y artículos de librería<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl24_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12216682&amp;o=4"><b></b>C<b></b>O<b></b>M<b></b>P<b></b>R<b></b>A<b></b> <b></b>D<b></b>E<b></b> <b></b>L<b></b>I<b></b>B<b></b>R<b></b>O<b></b> <b></b> <b></b>L<b></b>I<b></b>T<b></b>E<b></b>R<b></b>A<b></b>R<b></b>I<b></b>O<b></b> <b></b>P<b></b>A<b></b>R<b></b>A<b></b> <b></b>P<b></b>R<b></b>O<b></b>M<b></b>O<b></b>V<b></b>E<b></b>R<b></b> <b></b>L<b></b>A<b></b> <b></b>L<b></b>E<b></b>C<b></b>T<b></b>U<b></b>R<b></b>A<b></b> <b></b>E<b></b>N<b></b> <b></b>C<b></b>A<b></b>S<b></b>A<b></b> <b></b>D<b></b>E<b></b> <b></b>L<b></b>O<b></b>S<b></b> <b></b>V<b></b>E<b></b>C<b></b>I<b></b>N<b></b>O<b></b>S<b></b> <b></b>D<b></b>E<b></b> <b></b>L<b></b>A<b></b> <b></b>C<b></b>I<b></b>U<b></b>D<b></b>A<b></b>D<b></b> <b></b>D<b></b>E<b></b> <b></b>G<b></b>U<b></b>A<b></b>T<b></b>E<b></b>M<b></b>A<b></b>L<b></b>A<b></b>,<b></b> <b></b> <b></b>Q<b></b>U<b></b>E<b></b> <b></b>F<b></b>O<b></b>R<b></b>M<b></b>A<b></b>R<b></b>A<b></b> <b></b>P<b></b>A<b></b>R<b></b>T<b></b>E<b></b> <b></b>D<b></b>E<b></b>L<b></b> <b></b>P<b></b>R<b></b>O<b></b>Y<b></b>E<b></b>C<b></b>T<b></b>O<b></b> <b></b>E<b></b>D<b></b>U<b></b>C<b></b>A<b></b>T<b></b>I<b></b>V<b></b>O<b></b> <b></b>L<b></b>A<b></b> <b></b>C<b></b>A<b></b>J<b></b>A<b></b> <b></b>C<b></b>U<b></b>L<b></b>T<b></b>U<b></b>R<b></b>A<b></b>L<b></b> <b></b>D<b></b>E<b></b> <b></b>L<b></b>A<b></b> <b></b>D<b></b>I<b></b>R<b></b>E<b></b>C<b></b>C<b></b>I<b></b>O<b></b>N<b></b> <b></b>D<b></b>E<b></b> <b></b>E<b></b>D<b></b>U<b></b>C<b></b>A<b></b>C<b></b>I<b></b>O<b></b>N<b></b> <b></b>D<b></b>E<b></b> <b></b>C<b></b>U<b></b>L<b></b>T<b></b>U<b></b>R<b></b>A<b></b> <b></b>D<b></b>E<b></b> <b></b>L<b></b>A<b></b> <b></b>M<b></b>U<b></b>N<b></b>I<b></b>C<b></b>I<b></b>P<b></b>A<b></b>L<b></b>I<b></b>D<b></b>A<b></b>D<b></b> <b></b>D<b></b>E<b></b> <b></b>G<b></b>U<b></b>A<b></b>T<b></b>E<b></b>M<b></b>A<b></b>L<b></b>A<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl25_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12823260</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl25_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl25_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl25_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl25_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl25_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl25_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl25_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL GENERAL DE ENFERMEDADES</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl25_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl25_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12823260&amp;o=4"><b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>6<b></b>9<b></b>9<b></b>6<b></b>/<b></b>2<b></b>0<b></b>2<b></b>0<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>7<b></b>5<b></b>8<b></b>4<b></b>1<b></b> <b></b>E<b></b>m<b></b>i<b></b>c<b></b>i<b></b>z<b></b>u<b></b>m<b></b>a<b></b>b<b></b> <b></b>(<b></b>H<b></b>e<b></b>m<b></b>l<b></b>i<b></b>b<b></b>r<b></b>a<b></b>)<b></b> <b></b>3<b></b>0<b></b> <b></b>m<b></b>g<b></b>/<b></b>M<b></b>l<b></b> <b></b>i<b></b>n<b></b>y<b></b>e<b></b>c<b></b>c<b></b>i<b></b>o<b></b>n<b></b> <b></b>S<b></b>u<b></b>b<b></b>c<b></b>u<b></b>t<b></b>a<b></b>n<b></b>e<b></b>a<b></b> <b></b>v<b></b>i<b></b>a<b></b>l<b></b>,<b></b> <b></b>A<b></b>m<b></b>p<b></b>a<b></b>r<b></b>o<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>1<b></b>5<b></b>4<b></b>-<b></b>2<b></b>0<b></b>1<b></b>8<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl26_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12830119</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl26_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl26_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl26_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl26_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl26_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl26_Label7" title="Entidad que publica" style="font-weight:bold;">MUNICIPALIDAD DE SANTA CRUZ DEL QUICHÉ, QUICHÉ</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl26_Label8" title="Unidad compradora que publica" style="font-weight:bold;">TESORERIA MUNICIPAL</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl26_Label9" title="Categoría del concurso"><br>Construcción y materiales afines<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl26_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12830119&amp;o=4"><b></b>A<b></b>P<b></b>O<b></b>Y<b></b>O<b></b> <b></b>C<b></b>O<b></b>N<b></b> <b></b>D<b></b>O<b></b>T<b></b>A<b></b>C<b></b>I<b></b>O<b></b>N<b></b> <b></b>D<b></b>E<b></b> <b></b>M<b></b>A<b></b>T<b></b>E<b></b>R<b></b>I<b></b>A<b></b>L<b></b>E<b></b>S<b></b>,<b></b> <b></b>A<b></b>C<b></b>C<b></b>E<b></b>S<b></b>O<b></b>R<b></b>I<b></b>O<b></b>S<b></b> <b></b>Y<b></b> <b></b>M<b></b>A<b></b>N<b></b>T<b></b>E<b></b>N<b></b>I<b></b>M<b></b>I<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>D<b></b>E<b></b> <b></b>P<b></b>O<b></b>Z<b></b>O<b></b> <b></b>M<b></b>E<b></b>C<b></b>A<b></b>N<b></b>I<b></b>C<b></b>O<b></b> <b></b>E<b></b>L<b></b> <b></b>C<b></b>A<b></b>L<b></b>V<b></b>A<b></b>R<b></b>I<b></b>O<b></b> <b></b>Z<b></b>O<b></b>N<b></b>A<b></b> <b></b>1<b></b>,<b></b> <b></b>S<b></b>A<b></b>N<b></b>T<b></b>A<b></b> <b></b>C<b></b>R<b></b>U<b></b>Z<b></b> <b></b>D<b></b>E<b></b>L<b></b> <b></b>Q<b></b>U<b></b>I<b></b>C<b></b>H<b></b>E<b></b>,<b></b> <b></b>Q<b></b>U<b></b>I<b></b>C<b></b>H<b></b>E<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl27_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12823198</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl27_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl27_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl27_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl27_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl27_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl27_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl27_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL GENERAL DE ENFERMEDADES</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl27_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl27_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12823198&amp;o=4"><b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>6<b></b>9<b></b>9<b></b>1<b></b>/<b></b>2<b></b>0<b></b>2<b></b>0<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>1<b></b>0<b></b>4<b></b>1<b></b>6<b></b> <b></b>L<b></b>e<b></b>v<b></b>o<b></b>f<b></b>l<b></b>o<b></b>x<b></b>a<b></b>c<b></b>i<b></b>n<b></b>a<b></b> <b></b>H<b></b>e<b></b>m<b></b>i<b></b>h<b></b>i<b></b>d<b></b>r<b></b>a<b></b>t<b></b>o<b></b> <b></b>S<b></b>o<b></b>l<b></b>u<b></b>c<b></b>i<b></b>ó<b></b>n<b></b> <b></b>I<b></b>n<b></b>y<b></b>é<b></b>c<b></b>t<b></b>a<b></b>b<b></b>l<b></b>e<b></b> <b></b>5<b></b>0<b></b>0<b></b>m<b></b>g<b></b>/<b></b>M<b></b>l<b></b>.<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl28_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12826723</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl28_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl28_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl28_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl28_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl28_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl28_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl28_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL DR. JUAN JOSE AREVALO BERMEJO</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl28_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl28_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12826723&amp;o=4"><b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>N<b></b>O<b></b>.<b></b> <b></b>6<b></b>5<b></b>1<b></b>/<b></b>2<b></b>0<b></b>2<b></b>0<b></b>,<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>P<b></b>P<b></b>R<b></b> <b></b>6<b></b>7<b></b>2<b></b>1<b></b>4<b></b>-<b></b>8<b></b>0<b></b>6<b></b>9<b></b>1<b></b>,<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>8<b></b>8<b></b>3<b></b>3<b></b>,<b></b> <b></b>I<b></b>N<b></b>S<b></b>T<b></b>R<b></b>U<b></b>M<b></b>E<b></b>N<b></b>T<b></b>O<b></b>S<b></b> <b></b>P<b></b>A<b></b>R<b></b>A<b></b> <b></b>L<b></b>I<b></b>A<b></b>R<b></b> <b></b>V<b></b>A<b></b>S<b></b>O<b></b>S<b></b> <b></b>C<b></b>O<b></b>N<b></b> <b></b>C<b></b>I<b></b>R<b></b>U<b></b>G<b></b>I<b></b>A<b></b> <b></b>A<b></b>B<b></b>I<b></b>E<b></b>R<b></b>T<b></b>A<b></b> <b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl29_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12823449</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl29_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl29_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl29_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl29_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl29_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl29_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl29_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL GENERAL DE ENFERMEDADES</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl29_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl29_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12823449&amp;o=4"><b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>7<b></b>0<b></b>1<b></b>2<b></b>/<b></b>2<b></b>0<b></b>2<b></b>0<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>1<b></b>0<b></b>0<b></b>0<b></b>9<b></b> <b></b>F<b></b>a<b></b>c<b></b>t<b></b>o<b></b>r<b></b> <b></b>V<b></b>I<b></b>I<b></b> <b></b>r<b></b>e<b></b>c<b></b>o<b></b>m<b></b>b<b></b>i<b></b>n<b></b>a<b></b>n<b></b>t<b></b>e<b></b> <b></b>P<b></b>o<b></b>l<b></b>v<b></b>o<b></b> <b></b>y<b></b> <b></b>s<b></b>o<b></b>l<b></b>u<b></b>c<b></b>i<b></b>ó<b></b>n<b></b> <b></b>p<b></b>a<b></b>r<b></b>a<b></b> <b></b>u<b></b>s<b></b>o<b></b> <b></b>p<b></b>a<b></b>r<b></b>e<b></b>n<b></b>t<b></b>e<b></b>r<b></b>a<b></b>l<b></b> <b></b>R<b></b>T<b></b> <b></b>1<b></b> <b></b>m<b></b>g<b></b> <b></b>(<b></b>5<b></b>0<b></b>K<b></b>U<b></b>I<b></b>)<b></b> <b></b>S<b></b>e<b></b>g<b></b>ú<b></b>n<b></b> <b></b>A<b></b>m<b></b>p<b></b>a<b></b>r<b></b>o<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>3<b></b>7<b></b>-<b></b>2<b></b>0<b></b>1<b></b>6<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl30_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12217247</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl30_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl30_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>25.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl30_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl30_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl30_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl30_Label7" title="Entidad que publica" style="font-weight:bold;">MUNICIPALIDAD DE GUATEMALA, GUATEMALA</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl30_Label8" title="Unidad compradora que publica" style="font-weight:bold;">DIRECCION DE EDUCACION Y CULTURA</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl30_Label9" title="Categoría del concurso"><br>Papelería y artículos de librería<b> | </b>Seguridad y armamento<b> | </b>Seguros, fianzas y servicios bancarios<b> | </b>Textiles, ropa y calzado<b> | </b>Construcción y materiales afines<b> | </b>Otros tipos de bienes o servicios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl30_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12217247&amp;o=4"><b></b>C<b></b>O<b></b>M<b></b>P<b></b>R<b></b>A<b></b> <b></b>D<b></b>E<b></b> <b></b>M<b></b>A<b></b>T<b></b>E<b></b>R<b></b>I<b></b>A<b></b>L<b></b>E<b></b>S<b></b> <b></b>V<b></b>A<b></b>R<b></b>I<b></b>O<b></b>S<b></b> <b></b>Q<b></b>U<b></b>E<b></b> <b></b>F<b></b>O<b></b>R<b></b>M<b></b>A<b></b>R<b></b>A<b></b> <b></b>P<b></b>A<b></b>R<b></b>T<b></b>E<b></b> <b></b>D<b></b>E<b></b>L<b></b> <b></b>P<b></b>R<b></b>O<b></b>Y<b></b>E<b></b>C<b></b>T<b></b>O<b></b> <b></b>E<b></b>D<b></b>U<b></b>C<b></b>A<b></b>T<b></b>I<b></b>V<b></b>O<b></b> <b></b>L<b></b>A<b></b> <b></b>C<b></b>A<b></b>J<b></b>A<b></b> <b></b>C<b></b>U<b></b>L<b></b>T<b></b>U<b></b>R<b></b>A<b></b>L<b></b> <b></b>D<b></b>E<b></b> <b></b>L<b></b>A<b></b> <b></b>D<b></b>I<b></b>R<b></b>E<b></b>C<b></b>C<b></b>I<b></b>O<b></b>N<b></b> <b></b>D<b></b>E<b></b> <b></b>E<b></b>D<b></b>U<b></b>C<b></b>A<b></b>C<b></b>I<b></b>O<b></b>N<b></b> <b></b>D<b></b>E<b></b> <b></b>C<b></b>U<b></b>L<b></b>T<b></b>U<b></b>R<b></b>A<b></b> <b></b>D<b></b>E<b></b> <b></b>L<b></b>A<b></b> <b></b>M<b></b>U<b></b>N<b></b>I<b></b>C<b></b>I<b></b>P<b></b>A<b></b>L<b></b>I<b></b>D<b></b>A<b></b>D<b></b> <b></b>D<b></b>E<b></b> <b></b>G<b></b>U<b></b>A<b></b>T<b></b>E<b></b>M<b></b>A<b></b>L<b></b>A<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl31_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12814326</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl31_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl31_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl31_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl31_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl31_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl31_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl31_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL DR. JUAN JOSE AREVALO BERMEJO</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl31_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl31_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12814326&amp;o=4"><b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>N<b></b>O<b></b>.<b></b> <b></b>6<b></b>6<b></b>7<b></b>/<b></b>2<b></b>0<b></b>2<b></b>0<b></b>,<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>P<b></b>P<b></b>R<b></b> <b></b>4<b></b>9<b></b>0<b></b>8<b></b>9<b></b>-<b></b>5<b></b>7<b></b>4<b></b>7<b></b>9<b></b>,<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>8<b></b>7<b></b>0<b></b>2<b></b>,<b></b> <b></b>C<b></b>E<b></b>R<b></b>A<b></b> <b></b>P<b></b>A<b></b>R<b></b>A<b></b> <b></b>H<b></b>U<b></b>E<b></b>S<b></b>O<b></b> <b></b>A<b></b> <b></b>B<b></b>A<b></b>S<b></b>E<b></b> <b></b>D<b></b>E<b></b> <b></b>C<b></b>E<b></b>R<b></b>A<b></b> <b></b>D<b></b>E<b></b> <b></b>A<b></b>B<b></b>E<b></b>J<b></b>A<b></b> <b></b>(<b></b>7<b></b>0<b></b>%<b></b>)<b></b> <b></b>Y<b></b> <b></b>J<b></b>A<b></b>L<b></b>E<b></b>A<b></b> <b></b>D<b></b>E<b></b> <b></b>P<b></b>E<b></b>T<b></b>R<b></b>O<b></b>L<b></b>A<b></b>T<b></b>O<b></b> <b></b>(<b></b>3<b></b>0<b></b>%<b></b>)<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl32_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12823430</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl32_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl32_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl32_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl32_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl32_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl32_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl32_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL GENERAL DE ENFERMEDADES</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl32_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl32_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12823430&amp;o=4"><b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>7<b></b>0<b></b>1<b></b>1<b></b>/<b></b>2<b></b>0<b></b>2<b></b>0<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>1<b></b>0<b></b>0<b></b>0<b></b>9<b></b> <b></b>F<b></b>a<b></b>c<b></b>t<b></b>o<b></b>r<b></b> <b></b>V<b></b>I<b></b>I<b></b> <b></b>r<b></b>e<b></b>c<b></b>o<b></b>m<b></b>b<b></b>i<b></b>n<b></b>a<b></b>n<b></b>t<b></b>e<b></b> <b></b>P<b></b>o<b></b>l<b></b>v<b></b>o<b></b> <b></b>y<b></b> <b></b>s<b></b>o<b></b>l<b></b>u<b></b>c<b></b>i<b></b>ó<b></b>n<b></b> <b></b>p<b></b>a<b></b>r<b></b>a<b></b> <b></b>u<b></b>s<b></b>o<b></b> <b></b>p<b></b>a<b></b>r<b></b>e<b></b>n<b></b>t<b></b>e<b></b>r<b></b>a<b></b>l<b></b> <b></b>R<b></b>T<b></b> <b></b>1<b></b> <b></b>m<b></b>g<b></b> <b></b>(<b></b>5<b></b>0<b></b>K<b></b>U<b></b>I<b></b>)<b></b> <b></b>S<b></b>e<b></b>g<b></b>ú<b></b>n<b></b> <b></b>A<b></b>m<b></b>p<b></b>a<b></b>r<b></b>o<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>3<b></b>7<b></b>-<b></b>2<b></b>0<b></b>1<b></b>6<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl33_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12823422</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl33_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl33_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl33_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl33_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl33_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl33_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl33_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL GENERAL DE ENFERMEDADES</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl33_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl33_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12823422&amp;o=4"><b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>7<b></b>0<b></b>1<b></b>0<b></b>/<b></b>2<b></b>0<b></b>2<b></b>0<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>1<b></b>0<b></b>0<b></b>0<b></b>9<b></b> <b></b>F<b></b>a<b></b>c<b></b>t<b></b>o<b></b>r<b></b> <b></b>V<b></b>I<b></b>I<b></b> <b></b>r<b></b>e<b></b>c<b></b>o<b></b>m<b></b>b<b></b>i<b></b>n<b></b>a<b></b>n<b></b>t<b></b>e<b></b> <b></b>P<b></b>o<b></b>l<b></b>v<b></b>o<b></b> <b></b>y<b></b> <b></b>s<b></b>o<b></b>l<b></b>u<b></b>c<b></b>i<b></b>ó<b></b>n<b></b> <b></b>p<b></b>a<b></b>r<b></b>a<b></b> <b></b>u<b></b>s<b></b>o<b></b> <b></b>p<b></b>a<b></b>r<b></b>e<b></b>n<b></b>t<b></b>e<b></b>r<b></b>a<b></b>l<b></b> <b></b>R<b></b>T<b></b> <b></b>1<b></b> <b></b>m<b></b>g<b></b> <b></b>(<b></b>5<b></b>0<b></b>K<b></b>U<b></b>I<b></b>)<b></b> <b></b>S<b></b>e<b></b>g<b></b>ú<b></b>n<b></b> <b></b>A<b></b>m<b></b>p<b></b>a<b></b>r<b></b>o<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>3<b></b>7<b></b>-<b></b>2<b></b>0<b></b>1<b></b>6<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl34_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12823414</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl34_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl34_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl34_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl34_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl34_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl34_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl34_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL GENERAL DE ENFERMEDADES</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl34_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl34_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12823414&amp;o=4"><b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>7<b></b>0<b></b>0<b></b>9<b></b>/<b></b>2<b></b>0<b></b>2<b></b>0<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>1<b></b>0<b></b>0<b></b>0<b></b>9<b></b> <b></b>F<b></b>a<b></b>c<b></b>t<b></b>o<b></b>r<b></b> <b></b>V<b></b>I<b></b>I<b></b> <b></b>r<b></b>e<b></b>c<b></b>o<b></b>m<b></b>b<b></b>i<b></b>n<b></b>a<b></b>n<b></b>t<b></b>e<b></b> <b></b>P<b></b>o<b></b>l<b></b>v<b></b>o<b></b> <b></b>y<b></b> <b></b>s<b></b>o<b></b>l<b></b>u<b></b>c<b></b>i<b></b>ó<b></b>n<b></b> <b></b>p<b></b>a<b></b>r<b></b>a<b></b> <b></b>u<b></b>s<b></b>o<b></b> <b></b>p<b></b>a<b></b>r<b></b>e<b></b>n<b></b>t<b></b>e<b></b>r<b></b>a<b></b>l<b></b> <b></b>R<b></b>T<b></b> <b></b>1<b></b> <b></b>m<b></b>g<b></b> <b></b>(<b></b>5<b></b>0<b></b>K<b></b>U<b></b>I<b></b>)<b></b> <b></b>S<b></b>e<b></b>g<b></b>ú<b></b>n<b></b> <b></b>A<b></b>m<b></b>p<b></b>a<b></b>r<b></b>o<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>3<b></b>7<b></b>-<b></b>2<b></b>0<b></b>1<b></b>6<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl35_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12828564</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl35_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl35_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl35_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl35_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl35_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl35_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl35_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL DR. JUAN JOSE AREVALO BERMEJO</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl35_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl35_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12828564&amp;o=4"><b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>N<b></b>O<b></b>.<b></b> <b></b>6<b></b>6<b></b>4<b></b>/<b></b>2<b></b>0<b></b>2<b></b>0<b></b>,<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>P<b></b>P<b></b>R<b></b> <b></b>4<b></b>6<b></b>5<b></b>0<b></b>1<b></b>-<b></b>5<b></b>3<b></b>7<b></b>9<b></b>6<b></b>,<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>8<b></b>6<b></b>2<b></b>3<b></b>,<b></b> <b></b>S<b></b>E<b></b>T<b></b> <b></b>P<b></b>A<b></b>R<b></b>A<b></b> <b></b>T<b></b>R<b></b>A<b></b>Q<b></b>U<b></b>E<b></b>O<b></b>S<b></b>T<b></b>O<b></b>M<b></b>I<b></b>A<b></b> <b></b>P<b></b>E<b></b>C<b></b>U<b></b>T<b></b>A<b></b>N<b></b>E<b></b>A<b></b> <b></b>N<b></b>O<b></b>.<b></b> <b></b>8<b></b> <b></b>C<b></b>O<b></b>N<b></b> <b></b>D<b></b>I<b></b>L<b></b>A<b></b>T<b></b>A<b></b>D<b></b>O<b></b>R<b></b> <b></b>E<b></b>N<b></b> <b></b>J<b></b> <b></b>D<b></b>I<b></b>L<b></b>A<b></b>T<b></b>A<b></b>D<b></b>O<b></b>R<b></b> <b></b>D<b></b>E<b></b> <b></b>3<b></b>8<b></b> <b></b>F<b></b>R<b></b> <b></b>C<b></b>U<b></b>R<b></b>V<b></b>O<b></b> <b></b>R<b></b>A<b></b>D<b></b>I<b></b>O<b></b>P<b></b>A<b></b>C<b></b>O<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl36_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12823392</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl36_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl36_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl36_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl36_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl36_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl36_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl36_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL GENERAL DE ENFERMEDADES</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl36_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl36_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12823392&amp;o=4"><b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>7<b></b>0<b></b>0<b></b>8<b></b>/<b></b>2<b></b>0<b></b>2<b></b>0<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>1<b></b>0<b></b>0<b></b>0<b></b>9<b></b> <b></b>F<b></b>a<b></b>c<b></b>t<b></b>o<b></b>r<b></b> <b></b>V<b></b>I<b></b>I<b></b> <b></b>r<b></b>e<b></b>c<b></b>o<b></b>m<b></b>b<b></b>i<b></b>n<b></b>a<b></b>n<b></b>t<b></b>e<b></b> <b></b>P<b></b>o<b></b>l<b></b>v<b></b>o<b></b> <b></b>y<b></b> <b></b>s<b></b>o<b></b>l<b></b>u<b></b>c<b></b>i<b></b>ó<b></b>n<b></b> <b></b>p<b></b>a<b></b>r<b></b>a<b></b> <b></b>u<b></b>s<b></b>o<b></b> <b></b>p<b></b>a<b></b>r<b></b>e<b></b>n<b></b>t<b></b>e<b></b>r<b></b>a<b></b>l<b></b> <b></b>R<b></b>T<b></b> <b></b>1<b></b> <b></b>m<b></b>g<b></b> <b></b>(<b></b>5<b></b>0<b></b>K<b></b>U<b></b>I<b></b>)<b></b> <b></b>S<b></b>e<b></b>g<b></b>ú<b></b>n<b></b> <b></b>A<b></b>m<b></b>p<b></b>a<b></b>r<b></b>o<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>3<b></b>7<b></b>-<b></b>2<b></b>0<b></b>1<b></b>6<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl37_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12819069</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl37_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl37_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl37_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl37_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl37_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl37_Label7" title="Entidad que publica" style="font-weight:bold;">MUNICIPALIDAD DE EL PALMAR, QUETZALTENANGO</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl37_Label8" title="Unidad compradora que publica" style="font-weight:bold;">TESORERIA MUNICIPAL</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl37_Label9" title="Categoría del concurso"><br>Construcción y materiales afines<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl37_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12819069&amp;o=4"><b></b>a<b></b>p<b></b>e<b></b>r<b></b>t<b></b>u<b></b>r<b></b>a<b></b> <b></b>d<b></b>e<b></b> <b></b>b<b></b>r<b></b>e<b></b>c<b></b>h<b></b>a<b></b> <b></b>y<b></b> <b></b>p<b></b>e<b></b>r<b></b>f<b></b>o<b></b>r<b></b>a<b></b>c<b></b>i<b></b>o<b></b>n<b></b> <b></b>d<b></b>e<b></b> <b></b>a<b></b>g<b></b>u<b></b>j<b></b>e<b></b>r<b></b>o<b></b>s<b></b> <b></b>,<b></b> <b></b>b<b></b>o<b></b>t<b></b>a<b></b>d<b></b>e<b></b>r<b></b>o<b></b> <b></b>m<b></b>u<b></b>n<b></b>i<b></b>c<b></b>i<b></b>p<b></b>a<b></b>l<b></b> <b></b>,<b></b> <b></b>e<b></b>l<b></b> <b></b>p<b></b>a<b></b>l<b></b>m<b></b>a<b></b>r<b></b>,<b></b> <b></b>q<b></b>u<b></b>e<b></b>t<b></b>z<b></b>a<b></b>l<b></b>t<b></b>e<b></b>n<b></b>a<b></b>n<b></b>g<b></b>o<b></b>.<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl38_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12828505</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl38_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl38_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl38_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl38_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl38_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl38_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl38_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL DR. JUAN JOSE AREVALO BERMEJO</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl38_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl38_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12828505&amp;o=4"><b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>N<b></b>O<b></b>.<b></b> <b></b>6<b></b>6<b></b>3<b></b>/<b></b>2<b></b>0<b></b>2<b></b>0<b></b>,<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>P<b></b>P<b></b>R<b></b> <b></b>4<b></b>8<b></b>6<b></b>6<b></b>7<b></b>-<b></b>5<b></b>6<b></b>9<b></b>8<b></b>2<b></b>,<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>8<b></b>5<b></b>6<b></b>5<b></b>,<b></b> <b></b>F<b></b>I<b></b>J<b></b>A<b></b>D<b></b>O<b></b>R<b></b> <b></b>P<b></b>A<b></b>R<b></b>A<b></b> <b></b>S<b></b>O<b></b>N<b></b>D<b></b>A<b></b>S<b></b> <b></b>C<b></b>O<b></b>N<b></b> <b></b>M<b></b>A<b></b>T<b></b>E<b></b>R<b></b>I<b></b>A<b></b>L<b></b> <b></b>A<b></b>D<b></b>H<b></b>E<b></b>S<b></b>I<b></b>V<b></b>O<b></b> <b></b>D<b></b>E<b></b>S<b></b>C<b></b>A<b></b>R<b></b>T<b></b>A<b></b>B<b></b>L<b></b>E<b></b> <b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl39_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12823384</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl39_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl39_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl39_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl39_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl39_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl39_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl39_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL GENERAL DE ENFERMEDADES</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl39_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl39_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12823384&amp;o=4"><b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>7<b></b>0<b></b>0<b></b>7<b></b>/<b></b>2<b></b>0<b></b>2<b></b>0<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>1<b></b>0<b></b>0<b></b>0<b></b>9<b></b> <b></b>F<b></b>a<b></b>c<b></b>t<b></b>o<b></b>r<b></b> <b></b>V<b></b>I<b></b>I<b></b> <b></b>r<b></b>e<b></b>c<b></b>o<b></b>m<b></b>b<b></b>i<b></b>n<b></b>a<b></b>n<b></b>t<b></b>e<b></b> <b></b>P<b></b>o<b></b>l<b></b>v<b></b>o<b></b> <b></b>y<b></b> <b></b>s<b></b>o<b></b>l<b></b>u<b></b>c<b></b>i<b></b>ó<b></b>n<b></b> <b></b>p<b></b>a<b></b>r<b></b>a<b></b> <b></b>u<b></b>s<b></b>o<b></b> <b></b>p<b></b>a<b></b>r<b></b>e<b></b>n<b></b>t<b></b>e<b></b>r<b></b>a<b></b>l<b></b> <b></b>R<b></b>T<b></b> <b></b>1<b></b> <b></b>m<b></b>g<b></b> <b></b>(<b></b>5<b></b>0<b></b>K<b></b>U<b></b>I<b></b>)<b></b> <b></b>S<b></b>e<b></b>g<b></b>ú<b></b>n<b></b> <b></b>A<b></b>m<b></b>p<b></b>a<b></b>r<b></b>o<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>3<b></b>7<b></b>-<b></b>2<b></b>0<b></b>1<b></b>6<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl40_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12823376</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl40_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl40_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl40_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl40_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl40_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl40_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl40_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL GENERAL DE ENFERMEDADES</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl40_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl40_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12823376&amp;o=4"><b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>7<b></b>0<b></b>0<b></b>6<b></b>/<b></b>2<b></b>0<b></b>2<b></b>0<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>1<b></b>0<b></b>0<b></b>0<b></b>9<b></b> <b></b>F<b></b>a<b></b>c<b></b>t<b></b>o<b></b>r<b></b> <b></b>V<b></b>I<b></b>I<b></b> <b></b>r<b></b>e<b></b>c<b></b>o<b></b>m<b></b>b<b></b>i<b></b>n<b></b>a<b></b>n<b></b>t<b></b>e<b></b> <b></b>P<b></b>o<b></b>l<b></b>v<b></b>o<b></b> <b></b>y<b></b> <b></b>s<b></b>o<b></b>l<b></b>u<b></b>c<b></b>i<b></b>ó<b></b>n<b></b> <b></b>p<b></b>a<b></b>r<b></b>a<b></b> <b></b>u<b></b>s<b></b>o<b></b> <b></b>p<b></b>a<b></b>r<b></b>e<b></b>n<b></b>t<b></b>e<b></b>r<b></b>a<b></b>l<b></b> <b></b>R<b></b>T<b></b> <b></b>1<b></b> <b></b>m<b></b>g<b></b> <b></b>(<b></b>5<b></b>0<b></b>K<b></b>U<b></b>I<b></b>)<b></b> <b></b>S<b></b>e<b></b>g<b></b>ú<b></b>n<b></b> <b></b>A<b></b>m<b></b>p<b></b>a<b></b>r<b></b>o<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>3<b></b>7<b></b>-<b></b>2<b></b>0<b></b>1<b></b>6<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl41_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12749346</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl41_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl41_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>05.ago..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl41_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl41_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl41_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl41_Label7" title="Entidad que publica" style="font-weight:bold;">MINISTERIO DE LA DEFENSA NACIONAL</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl41_Label8" title="Unidad compradora que publica" style="font-weight:bold;">COMANDANCIA DE LA FUERZA AEREA GUATEMALTECA</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl41_Label9" title="Categoría del concurso"><br>Construcción y materiales afines<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl41_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12749346&amp;o=4"><b></b>M<b></b>A<b></b>N<b></b>T<b></b>E<b></b>N<b></b>I<b></b>M<b></b>I<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>Y<b></b> <b></b>R<b></b>E<b></b>P<b></b>A<b></b>R<b></b>A<b></b>C<b></b>I<b></b>Ó<b></b>N<b></b> <b></b>D<b></b>E<b></b>L<b></b> <b></b>A<b></b>U<b></b>D<b></b>I<b></b>T<b></b>Ó<b></b>R<b></b>I<b></b>U<b></b>M<b></b> <b></b>D<b></b>E<b></b>L<b></b> <b></b>C<b></b>O<b></b>M<b></b>A<b></b>N<b></b>D<b></b>O<b></b> <b></b>A<b></b>É<b></b>R<b></b>E<b></b>O<b></b> <b></b>C<b></b>E<b></b>N<b></b>T<b></b>R<b></b>A<b></b>L<b></b> <b></b>"<b></b>L<b></b>A<b></b> <b></b>A<b></b>U<b></b>R<b></b>O<b></b>R<b></b>A<b></b>"<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Licitación Pública (Art. 17 LCE)</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl42_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12828440</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl42_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl42_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl42_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl42_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl42_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl42_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl42_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL DR. JUAN JOSE AREVALO BERMEJO</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl42_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl42_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12828440&amp;o=4"><b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>N<b></b>O<b></b>.<b></b> <b></b>6<b></b>6<b></b>2<b></b>/<b></b>2<b></b>0<b></b>2<b></b>0<b></b>,<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>P<b></b>P<b></b>R<b></b> <b></b>7<b></b>5<b></b>4<b></b>6<b></b>9<b></b>-<b></b>8<b></b>9<b></b>5<b></b>2<b></b>5<b></b>,<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>8<b></b>0<b></b>6<b></b>6<b></b>,<b></b> <b></b>T<b></b>U<b></b>B<b></b>O<b></b> <b></b>P<b></b>A<b></b>R<b></b>A<b></b> <b></b>M<b></b>O<b></b>N<b></b>I<b></b>T<b></b>O<b></b>R<b></b>E<b></b>O<b></b> <b></b>D<b></b>E<b></b> <b></b>C<b></b>O<b></b>2<b></b> <b></b>E<b></b>X<b></b>H<b></b>A<b></b>L<b></b>A<b></b>D<b></b>O<b></b> <b></b>D<b></b>E<b></b> <b></b>P<b></b>O<b></b>L<b></b>I<b></b>U<b></b>R<b></b>E<b></b>T<b></b>A<b></b>N<b></b>O<b></b> <b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl43_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12823368</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl43_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl43_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl43_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl43_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl43_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl43_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl43_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL GENERAL DE ENFERMEDADES</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl43_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl43_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12823368&amp;o=4"><b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>7<b></b>0<b></b>0<b></b>5<b></b>/<b></b>2<b></b>0<b></b>2<b></b>0<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>1<b></b>0<b></b>0<b></b>0<b></b>9<b></b> <b></b>F<b></b>a<b></b>c<b></b>t<b></b>o<b></b>r<b></b> <b></b>V<b></b>I<b></b>I<b></b> <b></b>r<b></b>e<b></b>c<b></b>o<b></b>m<b></b>b<b></b>i<b></b>n<b></b>a<b></b>n<b></b>t<b></b>e<b></b> <b></b>P<b></b>o<b></b>l<b></b>v<b></b>o<b></b> <b></b>y<b></b> <b></b>s<b></b>o<b></b>l<b></b>u<b></b>c<b></b>i<b></b>ó<b></b>n<b></b> <b></b>p<b></b>a<b></b>r<b></b>a<b></b> <b></b>u<b></b>s<b></b>o<b></b> <b></b>p<b></b>a<b></b>r<b></b>e<b></b>n<b></b>t<b></b>e<b></b>r<b></b>a<b></b>l<b></b> <b></b>R<b></b>T<b></b> <b></b>1<b></b> <b></b>m<b></b>g<b></b> <b></b>(<b></b>5<b></b>0<b></b>K<b></b>U<b></b>I<b></b>)<b></b> <b></b>S<b></b>e<b></b>g<b></b>ú<b></b>n<b></b> <b></b>A<b></b>m<b></b>p<b></b>a<b></b>r<b></b>o<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>3<b></b>7<b></b>-<b></b>2<b></b>0<b></b>1<b></b>6<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl44_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12830070</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl44_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl44_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl44_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl44_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl44_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl44_Label7" title="Entidad que publica" style="font-weight:bold;">MINISTERIO DE SALUD PÚBLICA</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl44_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL DE INFECTOLOGÍA Y REHABILITACIÓN</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl44_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl44_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12830070&amp;o=4"><b></b>M<b></b>S<b></b>P<b></b>A<b></b>S<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>2<b></b>0<b></b>2<b></b>0<b></b>-<b></b>I<b></b>N<b></b>F<b></b>-<b></b>C<b></b>E<b></b>1<b></b>0<b></b>4<b></b> <b></b>A<b></b>D<b></b>Q<b></b>U<b></b>I<b></b>S<b></b>I<b></b>C<b></b>I<b></b>O<b></b>N<b></b> <b></b>D<b></b>E<b></b> <b></b>M<b></b>A<b></b>S<b></b>C<b></b>A<b></b>R<b></b>I<b></b>L<b></b>L<b></b>A<b></b>S<b></b> <b></b>C<b></b>O<b></b>N<b></b> <b></b> <b></b>V<b></b>A<b></b>L<b></b>V<b></b>U<b></b>L<b></b>A<b></b> <b></b>N<b></b>9<b></b>5<b></b> <b></b>P<b></b>A<b></b>R<b></b>A<b></b> <b></b>E<b></b>L<b></b> <b></b>H<b></b>O<b></b>S<b></b>P<b></b>I<b></b>T<b></b>A<b></b>L<b></b> <b></b>I<b></b>N<b></b>F<b></b>A<b></b>N<b></b>T<b></b>I<b></b>L<b></b> <b></b>D<b></b>E<b></b> <b></b>I<b></b>N<b></b>F<b></b>E<b></b>C<b></b>T<b></b>O<b></b>L<b></b>O<b></b>G<b></b>I<b></b>A<b></b> <b></b>Y<b></b> <b></b>R<b></b>E<b></b>H<b></b>A<b></b>B<b></b>I<b></b>L<b></b>I<b></b>T<b></b>A<b></b>C<b></b>I<b></b>O<b></b>N<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Procedimientos Regulados por el artículo 44 LCE (Casos de Excepción)</td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl45_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12829870</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl45_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl45_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl45_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl45_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl45_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl45_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl45_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL GENERAL DE ACCIDENTES CEIBAL</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl45_Label9" title="Categoría del concurso"><br>Otros tipos de bienes o servicios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl45_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12829870&amp;o=4"><b></b>S<b></b>E<b></b>R<b></b>V<b></b>I<b></b>C<b></b>I<b></b>O<b></b> <b></b>D<b></b>E<b></b> <b></b>R<b></b>E<b></b>P<b></b>A<b></b>R<b></b>A<b></b>C<b></b>I<b></b>Ó<b></b>N<b></b> <b></b>G<b></b>E<b></b>N<b></b>E<b></b>R<b></b>A<b></b>L<b></b> <b></b>C<b></b>O<b></b>M<b></b>P<b></b>L<b></b>E<b></b>T<b></b>A<b></b> <b></b>D<b></b>E<b></b> <b></b>L<b></b>A<b></b>V<b></b>A<b></b>D<b></b>O<b></b>R<b></b>A<b></b> <b></b>E<b></b>X<b></b>T<b></b>R<b></b>A<b></b>C<b></b> <b></b>D<b></b>E<b></b> <b></b>R<b></b>O<b></b>P<b></b>A<b></b> <b></b>M<b></b>/<b></b>M<b></b>I<b></b>L<b></b>N<b></b>O<b></b>R<b></b> <b></b>M<b></b>O<b></b>D<b></b>E<b></b>L<b></b>O<b></b> <b></b>4<b></b>2<b></b>0<b></b>2<b></b>6<b></b>Q<b></b>4<b></b>P<b></b>.<b></b> <b></b> <b></b>R<b></b>E<b></b>A<b></b>L<b></b>I<b></b>Z<b></b>A<b></b>R<b></b> <b></b>V<b></b>I<b></b>S<b></b>I<b></b>T<b></b>A<b></b> <b></b>T<b></b>É<b></b>C<b></b>N<b></b>I<b></b>C<b></b>A<b></b>.<b></b> <b></b>P<b></b>.<b></b> <b></b>3<b></b>3<b></b>5<b></b>8<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl46_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12823341</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl46_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl46_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl46_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl46_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl46_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl46_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl46_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL GENERAL DE ENFERMEDADES</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl46_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl46_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12823341&amp;o=4"><b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>7<b></b>0<b></b>0<b></b>4<b></b>/<b></b>2<b></b>0<b></b>2<b></b>0<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>1<b></b>0<b></b>0<b></b>0<b></b>9<b></b> <b></b>F<b></b>a<b></b>c<b></b>t<b></b>o<b></b>r<b></b> <b></b>V<b></b>I<b></b>I<b></b> <b></b>r<b></b>e<b></b>c<b></b>o<b></b>m<b></b>b<b></b>i<b></b>n<b></b>a<b></b>n<b></b>t<b></b>e<b></b> <b></b>P<b></b>o<b></b>l<b></b>v<b></b>o<b></b> <b></b>y<b></b> <b></b>s<b></b>o<b></b>l<b></b>u<b></b>c<b></b>i<b></b>ó<b></b>n<b></b> <b></b>p<b></b>a<b></b>r<b></b>a<b></b> <b></b>u<b></b>s<b></b>o<b></b> <b></b>p<b></b>a<b></b>r<b></b>e<b></b>n<b></b>t<b></b>e<b></b>r<b></b>a<b></b>l<b></b> <b></b>R<b></b>T<b></b> <b></b>1<b></b> <b></b>m<b></b>g<b></b> <b></b>(<b></b>5<b></b>0<b></b>K<b></b>U<b></b>I<b></b>)<b></b> <b></b>S<b></b>e<b></b>g<b></b>ú<b></b>n<b></b> <b></b>A<b></b>m<b></b>p<b></b>a<b></b>r<b></b>o<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>3<b></b>7<b></b>-<b></b>2<b></b>0<b></b>1<b></b>6<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl47_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12828408</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl47_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl47_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl47_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl47_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl47_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl47_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl47_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL DR. JUAN JOSE AREVALO BERMEJO</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl47_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl47_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12828408&amp;o=4"><b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>N<b></b>O<b></b>.<b></b> <b></b>6<b></b>6<b></b>1<b></b>/<b></b>2<b></b>0<b></b>2<b></b>0<b></b>,<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>P<b></b>P<b></b>R<b></b> <b></b>7<b></b>5<b></b>9<b></b>1<b></b>7<b></b>-<b></b>7<b></b>5<b></b>9<b></b>1<b></b>7<b></b>,<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>7<b></b>8<b></b>9<b></b>7<b></b>,<b></b> <b></b>B<b></b>R<b></b>A<b></b>Z<b></b>A<b></b>L<b></b>E<b></b>T<b></b>E<b></b> <b></b>D<b></b>E<b></b> <b></b>P<b></b>A<b></b>R<b></b>E<b></b>D<b></b> <b></b>S<b></b>U<b></b>A<b></b>V<b></b>E<b></b> <b></b>P<b></b>A<b></b>R<b></b>A<b></b> <b></b>M<b></b>O<b></b>N<b></b>I<b></b>T<b></b>O<b></b>R<b></b> <b></b>D<b></b>E<b></b> <b></b>P<b></b>R<b></b>E<b></b>S<b></b>I<b></b>O<b></b>N<b></b> <b></b>A<b></b>R<b></b>T<b></b>E<b></b>R<b></b>I<b></b>A<b></b>L<b></b> <b></b>N<b></b>O<b></b> <b></b>I<b></b>N<b></b>V<b></b>A<b></b>S<b></b>I<b></b>V<b></b>A<b></b> <b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl48_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12829803</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl48_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl48_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl48_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl48_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl48_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl48_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl48_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL GENERAL DE ACCIDENTES CEIBAL</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl48_Label9" title="Categoría del concurso"><br>Otros tipos de bienes o servicios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl48_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12829803&amp;o=4"><b></b>S<b></b>E<b></b>R<b></b>V<b></b>I<b></b>C<b></b>I<b></b>O<b></b> <b></b>D<b></b>E<b></b> <b></b>R<b></b>E<b></b>P<b></b>A<b></b>R<b></b>A<b></b>C<b></b>I<b></b>Ó<b></b>N<b></b> <b></b>G<b></b>E<b></b>N<b></b>E<b></b>R<b></b>A<b></b>L<b></b> <b></b>D<b></b>E<b></b> <b></b>S<b></b>E<b></b>C<b></b>A<b></b>D<b></b>O<b></b>R<b></b>A<b></b> <b></b>M<b></b>A<b></b>R<b></b>C<b></b>A<b></b> <b></b>I<b></b>M<b></b>E<b></b>S<b></b>A<b></b>,<b></b> <b></b>P<b></b>R<b></b>E<b></b>S<b></b>E<b></b>N<b></b>T<b></b>A<b></b>R<b></b> <b></b>C<b></b>A<b></b>R<b></b>T<b></b>A<b></b> <b></b>D<b></b>E<b></b> <b></b>R<b></b>E<b></b>P<b></b>R<b></b>E<b></b>S<b></b>E<b></b>N<b></b>T<b></b>A<b></b>C<b></b>I<b></b>Ó<b></b>N<b></b> <b></b>D<b></b>E<b></b> <b></b>M<b></b>A<b></b>R<b></b>C<b></b>A<b></b>,<b></b> <b></b>R<b></b>E<b></b>A<b></b>L<b></b>I<b></b>Z<b></b>A<b></b>R<b></b> <b></b>V<b></b>I<b></b>S<b></b>I<b></b>T<b></b>A<b></b> <b></b>T<b></b>É<b></b>C<b></b>N<b></b>I<b></b>C<b></b>A<b></b>.<b></b> <b></b>P<b></b>.<b></b> <b></b>3<b></b>3<b></b>4<b></b>9<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl49_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12823333</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl49_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl49_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl49_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl49_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl49_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl49_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl49_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL GENERAL DE ENFERMEDADES</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl49_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl49_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12823333&amp;o=4"><b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>7<b></b>0<b></b>0<b></b>3<b></b>/<b></b>2<b></b>0<b></b>2<b></b>0<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>1<b></b>0<b></b>0<b></b>0<b></b>9<b></b> <b></b>F<b></b>a<b></b>c<b></b>t<b></b>o<b></b>r<b></b> <b></b>V<b></b>I<b></b>I<b></b> <b></b>r<b></b>e<b></b>c<b></b>o<b></b>m<b></b>b<b></b>i<b></b>n<b></b>a<b></b>n<b></b>t<b></b>e<b></b> <b></b>P<b></b>o<b></b>l<b></b>v<b></b>o<b></b> <b></b>y<b></b> <b></b>s<b></b>o<b></b>l<b></b>u<b></b>c<b></b>i<b></b>ó<b></b>n<b></b> <b></b>p<b></b>a<b></b>r<b></b>a<b></b> <b></b>u<b></b>s<b></b>o<b></b> <b></b>p<b></b>a<b></b>r<b></b>e<b></b>n<b></b>t<b></b>e<b></b>r<b></b>a<b></b>l<b></b> <b></b>R<b></b>T<b></b> <b></b>1<b></b> <b></b>m<b></b>g<b></b> <b></b>(<b></b>5<b></b>0<b></b>K<b></b>U<b></b>I<b></b>)<b></b> <b></b>S<b></b>e<b></b>g<b></b>ú<b></b>n<b></b> <b></b>A<b></b>m<b></b>p<b></b>a<b></b>r<b></b>o<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>3<b></b>7<b></b>-<b></b>2<b></b>0<b></b>1<b></b>6<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl50_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12829943</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl50_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl50_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl50_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl50_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl50_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl50_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl50_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL GENERAL DE ACCIDENTES CEIBAL</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl50_Label9" title="Categoría del concurso"><br>Otros tipos de bienes o servicios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl50_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12829943&amp;o=4"><b></b>S<b></b>E<b></b>R<b></b>V<b></b>I<b></b>C<b></b>I<b></b>O<b></b> <b></b>D<b></b>E<b></b> <b></b>R<b></b>E<b></b>P<b></b>A<b></b>R<b></b>A<b></b>C<b></b>I<b></b>Ó<b></b>N<b></b> <b></b>G<b></b>E<b></b>N<b></b>E<b></b>R<b></b>A<b></b>L<b></b> <b></b>C<b></b>O<b></b>M<b></b>P<b></b>L<b></b>E<b></b>T<b></b>A<b></b> <b></b>D<b></b>E<b></b> <b></b>L<b></b>A<b></b>V<b></b>A<b></b>D<b></b>O<b></b>R<b></b>A<b></b> <b></b>M<b></b>A<b></b>R<b></b>C<b></b>A<b></b> <b></b>D<b></b>E<b></b>F<b></b>R<b></b>A<b></b>N<b></b>C<b></b>E<b></b>S<b></b>C<b></b>H<b></b>I<b></b> <b></b>C<b></b>A<b></b>P<b></b>A<b></b>C<b></b>I<b></b>D<b></b>A<b></b>D<b></b> <b></b>3<b></b>6<b></b>0<b></b> <b></b>L<b></b>B<b></b>S<b></b>.<b></b> <b></b> <b></b>R<b></b>E<b></b>A<b></b>L<b></b>I<b></b>Z<b></b>A<b></b>R<b></b> <b></b>V<b></b>I<b></b>S<b></b>I<b></b>T<b></b>A<b></b> <b></b>T<b></b>É<b></b>C<b></b>N<b></b>I<b></b>C<b></b>A<b></b>.<b></b> <b></b>P<b></b>.<b></b> <b></b>3<b></b>3<b></b>5<b></b>9<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix1">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl51_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12828289</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl51_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl51_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl51_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl51_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl51_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl51_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl51_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL DR. JUAN JOSE AREVALO BERMEJO</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl51_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl51_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12828289&amp;o=4"><b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>N<b></b>O<b></b>.<b></b> <b></b>6<b></b>6<b></b>0<b></b>/<b></b>2<b></b>0<b></b>2<b></b>0<b></b>,<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>P<b></b>P<b></b>R<b></b> <b></b>7<b></b>3<b></b>0<b></b>1<b></b>2<b></b>-<b></b>8<b></b>6<b></b>7<b></b>5<b></b>8<b></b>,<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>7<b></b>7<b></b>2<b></b>5<b></b>,<b></b> <b></b>S<b></b>U<b></b>T<b></b>U<b></b>R<b></b>A<b></b> <b></b>A<b></b>B<b></b>S<b></b>O<b></b>R<b></b>B<b></b>I<b></b>B<b></b>L<b></b>E<b></b> <b></b>S<b></b>I<b></b>N<b></b>T<b></b>E<b></b>T<b></b>I<b></b>C<b></b>A<b></b> <b></b>M<b></b>O<b></b>N<b></b>O<b></b>F<b></b>I<b></b>L<b></b>A<b></b>M<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>N<b></b>O<b></b>.<b></b> <b></b>0<b></b> <b></b>A<b></b>G<b></b>U<b></b>J<b></b>A<b></b> <b></b>C<b></b>U<b></b>R<b></b>V<b></b>A<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaFilaMix2">
+			<td align="left" valign="top" width="14%">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl52_Label1" title="NOG (Número de Operación Guatecompras)" class="ValorForm"><b>12823287</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl52_Label2" title="Fecha de publicación" class="TablaItemAzulSm">22.jun..2020</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl52_Label3" title="Fecha límite para ofertar" class="TablaItemAzulSm"><b>24.jun..2020</b></span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl52_Label4" title="Únicamente pueden participar los proveedores previamente invitados por el comprador" class="TablaItemAlerta"></span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl52_Label5" title="Puede participar cualquier proveedor" class="TablaItemAzulSm">Público</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl52_Label6" title="Estatus del concurso" class="TablaItemNormal">Vigente</span>
+						</div>
+					</td><td valign="top">
+					    <div align="Left">
+						    <span id="MasterGC_ContentBlockHolder_dgResultado_ctl52_Label7" title="Entidad que publica" style="font-weight:bold;">INSTITUTO GUATEMALTECO DE SEGURIDAD SOCIAL -IGSS-</span><br />
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl52_Label8" title="Unidad compradora que publica" style="font-weight:bold;">HOSPITAL GENERAL DE ENFERMEDADES</span>
+							<span id="MasterGC_ContentBlockHolder_dgResultado_ctl52_Label9" title="Categoría del concurso"><br>Salud e insumos hospitalarios<br></span>
+							<div align="left">
+							    <a id="MasterGC_ContentBlockHolder_dgResultado_ctl52_Hyperlink1" title="Descripción del concurso" href="/concursos/consultaConcurso.aspx?nog=12823287&amp;o=4"><b></b>E<b></b>V<b></b>E<b></b>N<b></b>T<b></b>O<b></b> <b></b>6<b></b>9<b></b>9<b></b>7<b></b>/<b></b>2<b></b>0<b></b>2<b></b>0<b></b> <b></b>C<b></b>O<b></b>D<b></b>I<b></b>G<b></b>O<b></b> <b></b>I<b></b>G<b></b>S<b></b>S<b></b> <b></b>7<b></b>5<b></b>8<b></b>4<b></b>1<b></b> <b></b>E<b></b>m<b></b>i<b></b>c<b></b>i<b></b>z<b></b>u<b></b>m<b></b>a<b></b>b<b></b> <b></b>(<b></b>H<b></b>e<b></b>m<b></b>l<b></b>i<b></b>b<b></b>r<b></b>a<b></b>)<b></b> <b></b>3<b></b>0<b></b> <b></b>m<b></b>g<b></b>/<b></b>M<b></b>l<b></b> <b></b>i<b></b>n<b></b>y<b></b>e<b></b>c<b></b>c<b></b>i<b></b>o<b></b>n<b></b> <b></b>S<b></b>u<b></b>b<b></b>c<b></b>u<b></b>t<b></b>a<b></b>n<b></b>e<b></b>a<b></b> <b></b>v<b></b>i<b></b>a<b></b>l<b></b>,<b></b> <b></b>A<b></b>m<b></b>p<b></b>a<b></b>r<b></b>o<b></b> <b></b>N<b></b>o<b></b>.<b></b> <b></b>1<b></b>5<b></b>4<b></b>-<b></b>2<b></b>0<b></b>1<b></b>8<b></b></a>
+							</div>
+						</div>
+					</td><td align="center" valign="middle">Compra Directa con Oferta Electrónica (Art. 43 LCE Inciso b)</td>
+		</tr><tr class="TablaPagineo">
+			<td colspan="3"><font size="2"><span><font color="DarkBlue" size="2">Ir a la página:  </font></span><span>1</span>&nbsp;<a href="javascript:__doPostBack(&#39;MasterGC$ContentBlockHolder$dgResultado$ctl54$ctl02&#39;,&#39;&#39;)">2</a>&nbsp;<a href="javascript:__doPostBack(&#39;MasterGC$ContentBlockHolder$dgResultado$ctl54$ctl03&#39;,&#39;&#39;)">3</a>&nbsp;<a href="javascript:__doPostBack(&#39;MasterGC$ContentBlockHolder$dgResultado$ctl54$ctl04&#39;,&#39;&#39;)">4</a>&nbsp;<a href="javascript:__doPostBack(&#39;MasterGC$ContentBlockHolder$dgResultado$ctl54$ctl05&#39;,&#39;&#39;)">5</a>&nbsp;<a href="javascript:__doPostBack(&#39;MasterGC$ContentBlockHolder$dgResultado$ctl54$ctl06&#39;,&#39;&#39;)">6</a>&nbsp;<a href="javascript:__doPostBack(&#39;MasterGC$ContentBlockHolder$dgResultado$ctl54$ctl07&#39;,&#39;&#39;)">7</a>&nbsp;<a href="javascript:__doPostBack(&#39;MasterGC$ContentBlockHolder$dgResultado$ctl54$ctl08&#39;,&#39;&#39;)">8</a>&nbsp;<a href="javascript:__doPostBack(&#39;MasterGC$ContentBlockHolder$dgResultado$ctl54$ctl09&#39;,&#39;&#39;)">9</a>&nbsp;<a href="javascript:__doPostBack(&#39;MasterGC$ContentBlockHolder$dgResultado$ctl54$ctl10&#39;,&#39;&#39;)">10</a>&nbsp;<a href="javascript:__doPostBack(&#39;MasterGC$ContentBlockHolder$dgResultado$ctl54$ctl11&#39;,&#39;&#39;)">...</a></font></td>
+		</tr>
+	</table>
+		<div align="center" style="  margin-top: 15px;">
+		    
+		</div><br />
+    
+</div>
+
+
+
+
+
+
+        
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Extended.UI.Localization.SetLocale("es");Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ModalPopupBehavior, {"backgroundCssClass":"modalBackground","dynamicServicePath":"/concursos/detallePorSubModConcuros.aspx","id":"MasterGC_ContentBlockHolder_ModalProgress","popupControlID":"MasterGC_ContentBlockHolder_panelUpdateProgress"}, null, null, $get("MasterGC_ContentBlockHolder_panelUpdateProgress"));
+});
+//]]>
+</script>
+</form>
+
+        <script type="text/javascript">
+            //funcion cambiar colores dependiendo el modulo.
+            function Ccolor() {
+                $("tr.TituloPag4").toggleClass("brown");
+                $("td.TituloPag4").toggleClass("brown");
+            }
+            window.onload = Ccolor();
+
+        </script>
+
+    </div>
+    <div id="pagefooter">
+        <div id="footer_top_banner"></div>
+        <div id="footer_bottom_banner">
+            <div id="texto_footer">
+                <div class="footerTexto">
+                    <div class="footerTextContainer">
+                        www.guatecompras.gt pertenece al Estado de la República de Guatemala<br />
+                        Compatible con Internet Explorer 9 en adelante, Mozilla Firefox y Chrome.
+                    </div>
+                </div>
+                <div class="footerTerminos">
+                    <a class="LinkfooterTerminos" href="/info/TerminosDeUso.aspx" target="_blank">Términos y Condiciones de Uso</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
