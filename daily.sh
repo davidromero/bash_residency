@@ -22,8 +22,8 @@ check_weather(){
 }
 
 check_corona_cases(){
+  curl -s https://corona-stats.online/GT?minimal=true | head -n 3 | awk '{ print $2 $3 "     "$5 " "$6 "    " $7 " " $8 $9 "   " $10 $11  }'
   #echo 'are we f#!^ up?'
-  echo 'run b:#$;'
 }
 
 check_arch(){
@@ -96,13 +96,20 @@ log_() {
 	uname -noi >> launch.log
 }
 
-check_arch
-
-log_
-
-echo -e $WHITE_COLOR 'Welcome ' $HOST
+echo -e $WHITE_COLOR 'Welcome ' $HOSTNAME
 check_weather
+
 print_del_lin
+check_corona_cases
+print_del_lin
+
+echo -e $WHITE_COLOR '~~~~ Checking Website Health Status  ~~~~'
+
+echo -e $CYAN_COLOR"$ESPACES"'Personal'
+check_health_status dromero.xyz
+
+echo -e $CYAN_COLOR"$ESPACES"'Raspberry'
+check_health_status raspberry.dromero.xyz
 
 echo -e $WHITE_COLOR 'Daily Starting Process'
 print_del_lin
@@ -117,16 +124,6 @@ print_del_lin
 
 echo -e $WHITE_COLOR 'Starting BookShelf'
 check_is_running calibre
-print_del_lin
-
-echo -e $WHITE_COLOR '**** Checking Website Health Status  ****'
-
-echo -e $CYAN_COLOR"$ESPACES"'Personal'
-check_health_status dromero.xyz
-
-echo -e $CYAN_COLOR"$ESPACES"'Raspberry'
-check_health_status raspberry.dromero.xyz
-
 print_del_lin
 
 echo -e $PURPLE_COLOR '>>>> Starting SubRoutines'
