@@ -18,6 +18,7 @@ PURPLE_COLOR='\E[0;35m'
 
 check_weather(){
   # based on localtion just print minimal weather option
+  printf ' '
   curl wttr.in/?0q 
 }
 
@@ -96,7 +97,7 @@ log_() {
 	uname -noi >> launch.log
 }
 
-echo -e $WHITE_COLOR 'Welcome ' $HOSTNAME
+echo 'Welcome ' $HOSTNAME # no color till arch check
 check_weather
 
 print_del_lin
