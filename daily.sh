@@ -89,6 +89,10 @@ print_del_lin(){
 	echo -e $BLUE_COLOR $LINE_DEL
 }
 
+print_del_lin_nc(){   # print del line No Color 
+  echo $LINE_DEL
+}
+
 log_() {
 	echo -e $CYAN_COLOR 'ID {$HOSTNAME}' >> launch.log
 	printf $RED_COLOR >> launch.log
@@ -100,9 +104,9 @@ log_() {
 echo 'Welcome ' $HOSTNAME # no color till arch check
 check_weather
 
-print_del_lin
+print_del_lin_nc
 check_corona_cases
-print_del_lin
+print_del_lin_nc
 
 check_arch
 
