@@ -33,7 +33,7 @@ check_arch(){
   if [[ ARCH -eq 0 ]]; then
     echo ''
   else
-    echo $RED_COLOR 'Routine for this OS is not implemented (yet)'
+    echo 'Routine for this OS is not implemented (yet)' # Colors not supported
     exit
   fi
 }
@@ -89,16 +89,16 @@ print_del_lin(){
 }
 
 log_() {
-	echo -e $CYAN_COLOR 'ID {num}' >> launch.log
+	echo -e $CYAN_COLOR 'ID {$HOSTNAME}' >> launch.log
 	printf $RED_COLOR >> launch.log
 	my_date=$(date +"%H-%M-%S.%d/%m/%Y")
 	printf "$my_date " >> launch.log
 	uname -noi >> launch.log
 }
 
-log_
-
 check_arch
+
+log_
 
 echo -e $WHITE_COLOR 'Welcome ' $HOST
 check_weather

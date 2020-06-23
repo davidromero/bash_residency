@@ -52,7 +52,6 @@
 [0;31m19-19-51.19/06/2020 machine x86_64 GNU/Linux
 [0;36m ID {num}
 [0;31m01-00-33.20/06/2020 machine x86_64 GNU/Linux
-<<<<<<< HEAD
 [0;36m ID {num}
 [0;31m21-33-33.20/06/2020 machine x86_64 GNU/Linux
 [0;36m ID {num}
@@ -67,7 +66,5 @@
 [0;31m21-12-36.22/06/2020 machine x86_64 GNU/Linux
 [0;36m ID {num}
 [0;31m21-21-10.22/06/2020 machine x86_64 GNU/Linux
-=======
 \E[0;36m ID {num}
 [0;31m17-06-38.22/06/2020 
->>>>>>> 2278c95c306bcfc170e92e599f99b76b24a7ca35
