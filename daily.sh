@@ -103,6 +103,10 @@ print_del_lin
 check_corona_cases
 print_del_lin
 
+check_arch
+
+_log
+
 echo -e $WHITE_COLOR '~~~~ Checking Website Health Status  ~~~~'
 
 echo -e $CYAN_COLOR"$ESPACES"'Personal'
