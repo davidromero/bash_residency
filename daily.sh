@@ -16,8 +16,29 @@ PURPLE_COLOR='\E[0;35m'
 
 # This (.sh) MUST be the main entry point if for some reason something is already running it should check it, before trying to run
 
-check_is_running(){
+check_weather(){
+  # based on localtion just print minimal weather option
+  curl wttr.in/?0q 
+}
 
+check_corona_cases(){
+  #echo 'are we f#!^ up?'
+  echo 'run b:#$;'
+}
+
+check_arch(){
+  uname -s | grep -q "Linux"
+  ARCH=$?
+
+  if [[ ARCH -eq 0 ]]; then
+    echo ''
+  else
+    echo $RED_COLOR 'Routine for this OS is not implemented (yet)'
+    exit
+  fi
+}
+
+check_is_running(){
 	if [[ -z $(pgrep $1) ]]; then				# check if return value is ZERO
 		start_process $1				# Starting sequence
 	else
@@ -76,6 +97,12 @@ log_() {
 }
 
 log_
+
+check_arch
+
+echo -e $WHITE_COLOR 'Welcome ' $HOST
+check_weather
+print_del_lin
 
 echo -e $WHITE_COLOR 'Daily Starting Process'
 print_del_lin

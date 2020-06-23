@@ -38,3 +38,5 @@ rm out.txt lines.txt
 get_NGOs "HOSPITAL%20ROOSEVELT"
 
 get_NGOs "HOSPITAL"
+
+get_NGOs "COVID%2019"
