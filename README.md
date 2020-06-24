@@ -1,4 +1,4 @@
-![](https://media.giphy.com/media/VGQrJZNBkwLosBKKOK/giphy.gif)
+<img src="https://media.giphy.com/media/VGQrJZNBkwLosBKKOK/giphy.gif" width="536" height="1001"/>
 
 # Personal Scripts
 
