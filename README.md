@@ -1,10 +1,8 @@
-# List of Personal Scripts
+![](https://media.giphy.com/media/VGQrJZNBkwLosBKKOK/giphy.gif)
 
-The main purpose is to eliminate using GUIs and have a portable startup-sequence-script
+# Personal Scripts
 
-## daily
-
-- Runs IDEA IntelliJ, firefox and calibre, check website status and [TODO] utils.
+The main purpose is to automate daily and fun Stuff.
 
 
-** tested on secondary machine
+**- tested on machine1, machine2, Darwin
