@@ -68,3 +68,15 @@
 [0;31m21-21-10.22/06/2020 machine x86_64 GNU/Linux
 \E[0;36m ID {num}
 [0;31m17-06-38.22/06/2020 
+[0;36m ID {$HOSTNAME}
+[0;31m22-29-45.22/06/2020 machine x86_64 GNU/Linux
+[0;36m ID {$HOSTNAME}
+[0;31m22-34-16.22/06/2020 machine x86_64 GNU/Linux
+[0;36m ID {$HOSTNAME}
+[0;31m22-35-20.22/06/2020 machine x86_64 GNU/Linux
+[0;36m ID {$HOSTNAME}
+[0;31m22-36-28.22/06/2020 machine x86_64 GNU/Linux
+[0;36m ID {$HOSTNAME}
+[0;31m17-49-21.23/06/2020 machine x86_64 GNU/Linux
+[0;36m ID {$HOSTNAME}
+[0;31m02-22-52.24/06/2020 machine x86_64 GNU/Linux

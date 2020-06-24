@@ -32,9 +32,9 @@ check_arch(){
   ARCH=$?
 
   if [[ ARCH -eq 0 ]]; then
-    echo ''
+    printf ''
   else
-    echo 'Routine for this OS is not implemented (yet)' # Colors not supported
+    echo 'Routine for this OS is not implemented (yet)'
     exit
   fi
 }
@@ -101,7 +101,9 @@ log_() {
 	uname -noi >> launch.log
 }
 
+# Entry
 echo 'Welcome ' $HOSTNAME # no color till arch check
+
 check_weather
 
 print_del_lin_nc
@@ -110,7 +112,7 @@ print_del_lin_nc
 
 check_arch
 
-_log
+log_
 
 echo -e $WHITE_COLOR '~~~~ Checking Website Health Status  ~~~~'
 
