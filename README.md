@@ -1,4 +1,6 @@
-<img src="https://media.giphy.com/media/VGQrJZNBkwLosBKKOK/giphy.gif" width="268" height="500"/>
+<p align="center">
+<img src="https://media.giphy.com/media/VGQrJZNBkwLosBKKOK/giphy.gif" width="402" height="700"/>
+</p>
 
 # Personal Scripts
 
