@@ -14,7 +14,10 @@ RED_COLOR='\E[0;31m'
 CYAN_COLOR='\E[0;36m'
 PURPLE_COLOR='\E[0;35m'
 
-# This (.sh) MUST be the main entry point if for some reason something is already running it should check it, before trying to run
+check_aws_config(){
+  aws configure list | grep 'access_key\|region' | awk '{ print " " $1 ": " $2 }'
+}
+
 
 check_weather(){
   # based on localtion just print minimal weather option
@@ -66,8 +69,11 @@ start_process(){
 				echo -e $GREEN_COLOR 'Launching calibre\n'
 				calibre &
 				;;
+      aws)
+        check_aws_config
+        ;;
 			*)
-				echo -e $RED_COLOR 'ERROR - no able to launch'$1
+				echo -e $RED_COLOR 'ERROR - not able to launch'$1
 				;;
 		esac
 	fi
@@ -101,7 +107,8 @@ log_() {
 	uname -noi >> launch.log
 }
 
-# Entry
+# This (.sh) MUST be the main entry point if for some reason something is already running it should check it, before trying to run
+
 echo 'Welcome ' $HOSTNAME # no color till arch check
 
 check_weather
@@ -135,6 +142,10 @@ print_del_lin
 
 echo -e $WHITE_COLOR 'Starting BookShelf'
 check_is_running calibre
+print_del_lin
+
+echo -e $WHITE_COLOR 'Cheking AWS-CLI config'
+start_process aws
 print_del_lin
 
 echo -e $PURPLE_COLOR '>>>> Starting SubRoutines'

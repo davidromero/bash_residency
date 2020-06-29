@@ -35,8 +35,12 @@ rm out.txt lines.txt
 
 }
 
+# Entry point
+
 get_NGOs "HOSPITAL%20ROOSEVELT"
 
 get_NGOs "HOSPITAL"
 
 get_NGOs "COVID%2019"
+
+get_NGOs "Escuintla"
