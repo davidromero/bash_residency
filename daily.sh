@@ -65,7 +65,7 @@ start_process(){
 				echo -e $GREEN_COLOR 'Launching firefox\n'
 				firefox mail.google.com &
 				;;
-			calibre)
+      calibre)
 				echo -e $GREEN_COLOR 'Launching calibre\n'
 				calibre &
 				;;
