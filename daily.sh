@@ -65,13 +65,13 @@ start_process(){
 				echo -e $GREEN_COLOR 'Launching firefox\n'
 				firefox mail.google.com &
 				;;
-      calibre)
+			calibre)
 				echo -e $GREEN_COLOR 'Launching calibre\n'
 				calibre &
 				;;
-      aws)
-        check_aws_config
-        ;;
+			aws)
+				check_aws_config
+                ;;
 			*)
 				echo -e $RED_COLOR 'ERROR - not able to launch'$1
 				;;
