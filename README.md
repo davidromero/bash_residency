@@ -6,5 +6,15 @@
 
 The main purpose is to automate daily and fun Stuff.
 
+### daily Sequence
 
-**- tested on machine1, machine2, Darwin
+- Check Weather
+- Corona Cases
+- Check Personal Websites Status
+- Run idea, firefox, calibre
+- Check AWS configs
+- (TODO) Subroutines
+
+**tested on machine1, machine2, Darwin**
+
+TODO starting sequence for {java-dev}{python-dev}{bash-dev}{job}
