@@ -63,7 +63,7 @@ start_process(){
 				;;
 			firefox)
 				echo -e $GREEN_COLOR 'Launching firefox\n'
-				firefox mail.google.com &
+				firefox mail.google.com trello.com dev.to linuxacademy.com news.ycombinator.com &
 				;;
 			calibre)
 				echo -e $GREEN_COLOR 'Launching calibre\n'
@@ -71,6 +71,9 @@ start_process(){
 				;;
 			aws)
 				check_aws_config
+                ;;
+            pycharm)
+                pycharm
                 ;;
 			*)
 				echo -e $RED_COLOR 'ERROR - not able to launch'$1
@@ -134,6 +137,10 @@ print_del_lin
 
 echo -e $WHITE_COLOR 'Starting IDEA'
 check_is_running idea
+print_del_lin
+
+echo -e $WHITE_COLOR 'Starting pycharm'
+check_is_running pycharm
 print_del_lin
 
 echo -e $WHITE_COLOR 'Starting Web Browser'
