@@ -63,7 +63,7 @@ start_process(){
 				;;
 			firefox)
 				echo -e $GREEN_COLOR 'Launching firefox\n'
-				firefox mail.google.com trello.com dev.to linuxacademy.com news.ycombinator.com &
+				firefox mail.google.com trello.com dev.to linuxacademy.com news.ycombinator.com docs.aws.amazon.com &
 				;;
 			calibre)
 				echo -e $GREEN_COLOR 'Launching calibre\n'
@@ -140,7 +140,7 @@ check_is_running idea
 print_del_lin
 
 echo -e $WHITE_COLOR 'Starting pycharm'
-check_is_running pycharm
+start_process pycharm # Fixed, not check_is_running because pycharm is an alias, just run it
 print_del_lin
 
 echo -e $WHITE_COLOR 'Starting Web Browser'
