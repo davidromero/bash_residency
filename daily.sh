@@ -52,14 +52,13 @@ check_is_running(){
 
 start_process(){
 
-	if ! [ -x "$(command -v $1)" ]; then
+	if ![[ command -v $1 &> /dev/null -eq 0 || alias $1 &>/dev/null -eq 0 ]]; then
 		echo -e $RED_COLOR 'Error: '$1' is not installed.'
 	else
 		case $1 in 					# unique checker, multiple launch, just add HERE future
 			idea)
 				echo -e $GREEN_COLOR 'Launching idea\n'
-				idea &
-				sleep 45s
+				/home/david/Documents/idea-IC-201.8538.31/bin/idea.sh &
 				;;
 			firefox)
 				echo -e $GREEN_COLOR 'Launching firefox\n'
@@ -71,10 +70,10 @@ start_process(){
 				;;
 			aws)
 				check_aws_config
-                ;;
-            pycharm)
-                pycharm
-                ;;
+                		;;
+            		pycharm)
+                		/home/david/Documents/pycharm-community-2020.1.3/bin/pycharm.sh &
+                		;;
 			*)
 				echo -e $RED_COLOR 'ERROR - not able to launch'$1
 				;;
@@ -140,7 +139,7 @@ check_is_running idea
 print_del_lin
 
 echo -e $WHITE_COLOR 'Starting pycharm'
-start_process pycharm # Fixed, not check_is_running because pycharm is an alias, just run it
+start_process pycharm # TODO: resolve the weird alias quick-fix not hardcoded .sh file
 print_del_lin
 
 echo -e $WHITE_COLOR 'Starting Web Browser'
