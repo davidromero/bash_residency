@@ -160,3 +160,5 @@
 [0;31m04-46-12.22/07/2020 machine x86_64 GNU/Linux
 [0;36m ID {$HOSTNAME}
 [0;31m04-51-27.22/07/2020 machine x86_64 GNU/Linux
+[0;36m ID {$HOSTNAME}
+[0;31m12-59-17.28/03/2021 davidvpn aarch64 GNU/Linux
